@@ -121,8 +121,21 @@ export type AuditEntry = {
 
 const DEFAULT_RECIPIENT = "ankur.rai1@aexp.com"; // demo default — alerts and trigger notifications route here unless overridden in Alert Studio / Trigger Studio
 
-const ROLLING_WINDOW = 60; // last N interactions used for rolling % calc
-const BASELINE_WINDOW = 120; // wider trailing window for spike comparison
+// Rolling-window sizing: scales with the active dataset instead of a fixed
+// constant, so a 23-row CSV upload and the 400-row seed set each get a window
+// that's proportionate to their size. 10% of the dataset is the target, but
+// it's clamped so alert math (`count_in_window >= 3`) stays meaningful on
+// small files and the gauge keeps a "live, moving" feel on large ones. The
+// baseline (trailing comparison) window is always double the rolling window —
+// preserving the original 60/120 ratio the demo was tuned against.
+const ROLLING_WINDOW_PCT = 0.10;
+const ROLLING_WINDOW_MIN = 20;
+const ROLLING_WINDOW_MAX = 100;
+function computeRollingWindow(total: number): number {
+  const target = Math.round(total * ROLLING_WINDOW_PCT);
+  return Math.max(ROLLING_WINDOW_MIN, Math.min(ROLLING_WINDOW_MAX, target || ROLLING_WINDOW_MIN));
+}
+
 const OUTCOME_TREND_LENGTH = 6; // snapshots captured before an outcome is "resolved"
 
 type ThemeStats = {
@@ -146,6 +159,9 @@ class RiskMeterStore {
   all: TaggedInteraction[] = taggedData as TaggedInteraction[];
   cursor = 0;
   seen: TaggedInteraction[] = [];
+  // Sized off `all.length` by `recomputeWindowSizes()` — see computeRollingWindow().
+  rollingWindow: number = computeRollingWindow((taggedData as TaggedInteraction[]).length);
+  baselineWindow: number = computeRollingWindow((taggedData as TaggedInteraction[]).length) * 2;
   alertConfigs: AlertConfig[] = [];
   triggerMonitors: TriggerMonitor[] = [];
   firedAlerts: FiredAlert[] = [];
@@ -159,8 +175,15 @@ class RiskMeterStore {
   redactedCount = 0;
 
   constructor() {
+    this.recomputeWindowSizes();
     this.seedDefaultAlertConfigs();
     this.seedDefaultTriggerMonitors();
+  }
+
+  /** Resize the rolling/baseline windows to ~10% of the active dataset (clamped). Call whenever `all` changes. */
+  private recomputeWindowSizes() {
+    this.rollingWindow = computeRollingWindow(this.all.length);
+    this.baselineWindow = this.rollingWindow * 2;
   }
 
   private seedDefaultAlertConfigs() {
@@ -221,11 +244,12 @@ class RiskMeterStore {
   /** Swap in a freshly uploaded + tagged dataset and restart the replay from the top. */
   loadDataset(items: TaggedInteraction[], meta: { filename: string; usedLLM: boolean; needsReview: number }) {
     this.all = items;
+    this.recomputeWindowSizes();
     this.reset();
     this.log(
       "decision",
-      `Loaded uploaded dataset "${meta.filename}" — ${items.length} interactions tagged via ${meta.usedLLM ? "live OpenAI (gpt-4o-mini)" : "heuristic fallback"} (${meta.needsReview} flagged needs_review). Replay restarted from the top.`,
-      { filename: meta.filename, count: items.length, used_llm: meta.usedLLM, needs_review: meta.needsReview }
+      `Loaded uploaded dataset "${meta.filename}" — ${items.length} interactions tagged via ${meta.usedLLM ? "live OpenAI (gpt-4o-mini)" : "heuristic fallback"} (${meta.needsReview} flagged needs_review). Rolling window resized to ${this.rollingWindow} (~10% of dataset, trailing baseline ${this.baselineWindow}). Replay restarted from the top.`,
+      { filename: meta.filename, count: items.length, used_llm: meta.usedLLM, needs_review: meta.needsReview, rolling_window: this.rollingWindow, baseline_window: this.baselineWindow }
     );
   }
 
@@ -252,7 +276,7 @@ class RiskMeterStore {
       const item = this.all[this.cursor];
       this.cursor++;
       this.seen.push(item);
-      if (this.seen.length > BASELINE_WINDOW * 3) this.seen.shift();
+      if (this.seen.length > this.baselineWindow * 3) this.seen.shift();
       advanced++;
 
       // --- Stage 0: PII redaction gate (runs before the text is treated as
@@ -310,8 +334,8 @@ class RiskMeterStore {
   }
 
   private rollingStats(): ThemeStats[] {
-    const window = this.seen.slice(-ROLLING_WINDOW);
-    const baseline = this.seen.slice(-BASELINE_WINDOW, -ROLLING_WINDOW);
+    const window = this.seen.slice(-this.rollingWindow);
+    const baseline = this.seen.slice(-this.baselineWindow, -this.rollingWindow);
     const windowTotal = window.length || 1;
     const baselineTotal = baseline.length || 1;
 
@@ -335,7 +359,7 @@ class RiskMeterStore {
     return {
       cursor: this.cursor,
       total: this.all.length,
-      window_size: Math.min(this.seen.length, ROLLING_WINDOW),
+      window_size: Math.min(this.seen.length, this.rollingWindow),
       overall_risk_pct: Math.round(overall * 10) / 10,
       themes: stats.sort((a, b) => b.pct_in_window - a.pct_in_window),
       top_theme: top[0] ?? null,
@@ -478,7 +502,7 @@ class RiskMeterStore {
     const anticipated = monitor ? ` An armed "${monitor.label}" trigger raised sensitivity ${monitor.sensitivity_multiplier}× for this theme, catching it earlier than the standing line would have.` : "";
     const message =
       type === "threshold"
-        ? `"${cfg.theme}" has crossed its ${monitor ? "trigger-adjusted" : "configured"} threshold: ${s.pct_in_window.toFixed(1)}% of the last ${ROLLING_WINDOW} interactions vs. a ${(effectiveThreshold ?? cfg.threshold_pct).toFixed(1)}% line.${anticipated}`
+        ? `"${cfg.theme}" has crossed its ${monitor ? "trigger-adjusted" : "configured"} threshold: ${s.pct_in_window.toFixed(1)}% of the last ${this.rollingWindow} interactions vs. a ${(effectiveThreshold ?? cfg.threshold_pct).toFixed(1)}% line.${anticipated}`
         : `"${cfg.theme}" has spiked: ${s.pct_in_window.toFixed(1)}% now vs. a ${s.baseline_pct.toFixed(1)}% trailing baseline (${(cfg.spike_multiplier ?? 2)}x threshold).${anticipated}`;
     return {
       id: `${cfg.id}-${type}-${Date.now()}`,
@@ -613,7 +637,7 @@ class RiskMeterStore {
       result = {
         connector: "Deep-dive Research Agent (stubbed — real-shaped)",
         artifact_id: artifactId,
-        scope: `Full interaction set tagged to "${alert.theme}" (last ${ROLLING_WINDOW} + trailing ${BASELINE_WINDOW - ROLLING_WINDOW})`,
+        scope: `Full interaction set tagged to "${alert.theme}" (last ${this.rollingWindow} + trailing ${this.baselineWindow - this.rollingWindow})`,
         summary: `Commissioned an extended review of ${alert.theme.toLowerCase()} signals — preliminary scope confirmed against ${alert.evidence.length} sampled root causes; full artifact will be attached to the audit record on completion.`,
         status: "running",
       };

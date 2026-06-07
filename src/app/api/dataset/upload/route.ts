@@ -1,13 +1,18 @@
 import { NextResponse } from "next/server";
-import { store } from "@/lib/store";
-import { tagOne, usingLiveLLM } from "@/lib/tagging";
-import type { TaggedInteraction } from "@/lib/types";
+import { usingLiveLLM } from "@/lib/tagging";
+import { createSession } from "@/lib/uploadSessions";
+import type { RawInteraction } from "@/lib/types";
 
 // Cap how many rows we'll tag per upload — keeps the demo responsive and,
 // when OPENAI_API_KEY is set, bounds the live-API cost/time of a single request.
 const MAX_ROWS = 300;
 
 const REQUIRED_COLUMNS = ["interaction_id", "type", "date", "root_cause"];
+
+// How many rows the client will ask the batch endpoint to tag per call. Kept
+// small so each request finishes quickly — the UI polls in a loop and renders
+// progress between calls instead of blocking on one giant tagging pass.
+export const BATCH_SIZE = 10;
 
 function parseCsv(text: string): string[][] {
   // Minimal RFC-4180-ish CSV parser: handles quoted fields, embedded commas,
@@ -74,44 +79,38 @@ export async function POST(req: Request) {
   const dataRows = rows.slice(1, 1 + MAX_ROWS);
   const truncated = rows.length - 1 > MAX_ROWS;
 
-  const usedLLM = usingLiveLLM();
-  const tagged: TaggedInteraction[] = [];
-  const failures: string[] = [];
-
+  const parsed: RawInteraction[] = [];
   for (let i = 0; i < dataRows.length; i++) {
     const r = dataRows[i];
-    const interaction_id = (r[colIdx.interaction_id] || `uploaded-${i + 1}`).trim();
-    const type = (r[colIdx.type] || "unknown").trim();
-    const date = (r[colIdx.date] || "").trim();
     const root_cause = (r[colIdx.root_cause] || "").trim();
     if (!root_cause) continue;
-    try {
-      const { normalized, tag, needs_review } = await tagOne(root_cause);
-      tagged.push({ interaction_id, type, date, root_cause, normalized, tag, needs_review });
-    } catch (err) {
-      failures.push(`${interaction_id}: ${(err as Error).message}`);
-    }
+    parsed.push({
+      interaction_id: (r[colIdx.interaction_id] || `uploaded-${i + 1}`).trim(),
+      type: (r[colIdx.type] || "unknown").trim(),
+      date: (r[colIdx.date] || "").trim(),
+      root_cause,
+    });
   }
 
-  if (!tagged.length) {
-    return NextResponse.json(
-      { error: "No rows could be tagged." + (failures.length ? ` First failure: ${failures[0]}` : "") },
-      { status: 422 }
-    );
+  if (!parsed.length) {
+    return NextResponse.json({ error: "No usable rows found — every row was missing a root_cause value." }, { status: 422 });
   }
 
-  const needsReview = tagged.filter((t) => t.needs_review).length;
-  store.loadDataset(tagged, { filename: file.name, usedLLM, needsReview });
+  const usedLLM = usingLiveLLM();
+  const session = createSession(file.name, parsed, { usedLLM, truncated, truncatedTo: truncated ? MAX_ROWS : null });
 
+  // Nothing is tagged yet — the client drives tagging via repeated calls to
+  // /api/dataset/upload/batch (BATCH_SIZE rows at a time), which keeps each
+  // request short and lets the UI show live progress instead of waiting on
+  // one big all-at-once tagging pass that can trip connection timeouts.
   return NextResponse.json({
     ok: true,
-    filename: file.name,
-    loaded: tagged.length,
-    skipped_failures: failures.length,
-    needs_review: needsReview,
+    uploadId: session.id,
+    filename: session.filename,
+    total: session.rows.length,
+    batch_size: BATCH_SIZE,
     used_llm: usedLLM,
     truncated,
     truncated_to: truncated ? MAX_ROWS : null,
-    aggregation: store.getAggregation(),
   });
 }

@@ -34,6 +34,7 @@ export default function DashboardPage() {
   const [flash, setFlash] = useState(false);
   const [uploading, setUploading] = useState(false);
   const [uploadMsg, setUploadMsg] = useState<{ ok: boolean; text: string } | null>(null);
+  const [uploadProgress, setUploadProgress] = useState<{ tagged: number; total: number; latestTheme?: string } | null>(null);
   const timer = useRef<ReturnType<typeof setInterval> | null>(null);
   const fileInput = useRef<HTMLInputElement | null>(null);
 
@@ -77,23 +78,64 @@ export default function DashboardPage() {
     setPlaying(false);
     setUploading(true);
     setUploadMsg(null);
+    setUploadProgress(null);
     try {
+      // Phase 1: parse + validate the CSV and open a tagging session. Nothing
+      // is tagged yet — this returns almost instantly with a row count.
       const fd = new FormData();
       fd.append("file", file);
-      const res = await fetch("/api/dataset/upload", { method: "POST", body: fd });
-      const data = await res.json();
-      if (!res.ok) {
-        setUploadMsg({ ok: false, text: data.error || "Upload failed." });
-      } else {
+      const startRes = await fetch("/api/dataset/upload", { method: "POST", body: fd });
+      const start = await startRes.json();
+      if (!startRes.ok) {
+        setUploadMsg({ ok: false, text: start.error || "Upload failed." });
+        return;
+      }
+
+      const tagSourceLabel = start.used_llm ? "live OpenAI (gpt-4o-mini)" : "heuristic fallback (set OPENAI_API_KEY for live tagging)";
+      setUploadProgress({ tagged: 0, total: start.total });
+      setUploadMsg({ ok: true, text: `Tagging "${start.filename}" via ${tagSourceLabel} — 0 / ${start.total} so far…` });
+
+      // Phase 2: drive tagging in small batches so the UI updates as it goes,
+      // instead of waiting on one all-at-once pass that can drop the connection.
+      let final: Record<string, unknown> | null = null;
+      for (;;) {
+        const res = await fetch("/api/dataset/upload/batch", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ uploadId: start.uploadId }),
+        });
+        const data = await res.json();
+        if (!res.ok) {
+          setUploadMsg({ ok: false, text: data.error || "Tagging failed partway through — try again." });
+          setUploadProgress(null);
+          return;
+        }
+
+        const latestTheme = data.latest?.length ? data.latest[data.latest.length - 1].theme : undefined;
+        setUploadProgress({ tagged: data.tagged ?? data.loaded ?? 0, total: data.total ?? start.total, latestTheme });
         setUploadMsg({
           ok: true,
-          text: `Loaded ${data.loaded} interactions from "${data.filename}" — tagged via ${data.used_llm ? "live OpenAI (gpt-4o-mini)" : "heuristic fallback (set OPENAI_API_KEY for live tagging)"}, ${data.needs_review} flagged for review${data.truncated ? ` (file truncated to first ${data.truncated_to} rows)` : ""}. Replay restarted.`,
+          text: `Tagging "${start.filename}" via ${tagSourceLabel} — ${data.tagged ?? data.loaded} / ${data.total ?? start.total}` +
+            (latestTheme ? ` · latest: ${latestTheme.split(" ").slice(0, 4).join(" ")}…` : "") +
+            (data.needs_review ? ` · ${data.needs_review} flagged for review so far` : ""),
+        });
+
+        if (data.done) { final = data; break; }
+        // Brief pause between batches keeps the UI smooth and is gentle on rate limits.
+        await new Promise((r) => setTimeout(r, 250));
+      }
+
+      if (final) {
+        setUploadMsg({
+          ok: true,
+          text: `Loaded ${final.loaded} interactions from "${final.filename}" — tagged via ${tagSourceLabel}, ${final.needs_review} flagged for review${final.truncated ? ` (file truncated to first ${final.truncated_to} rows)` : ""}${final.skipped_failures ? `, ${final.skipped_failures} rows skipped (tagging failures)` : ""}. Replay restarted.`,
         });
       }
     } catch {
       setUploadMsg({ ok: false, text: "Upload failed — check your connection and try again." });
     } finally {
       setUploading(false);
+      setUploadProgress(null);
       if (fileInput.current) fileInput.current.value = "";
       await refresh();
     }
@@ -177,6 +219,23 @@ export default function DashboardPage() {
           {agg && (
             <div className="mono" style={{ marginTop: 18, fontSize: 11.5, color: "var(--faint)" }}>
               {agg.cursor.toLocaleString()} / {agg.total.toLocaleString()} interactions replayed ({progressPct}%) · rolling window: last {agg.window_size}
+            </div>
+          )}
+          {uploadProgress && uploadProgress.total > 0 && (
+            <div style={{ marginTop: 10, maxWidth: 420 }}>
+              <span className="barTrack" style={{ display: "block" }}>
+                <span
+                  className="barFill"
+                  style={{
+                    width: `${Math.min(100, Math.round((uploadProgress.tagged / uploadProgress.total) * 100))}%`,
+                    background: "var(--blue)",
+                    transition: "width .3s ease",
+                  }}
+                />
+              </span>
+              <div className="mono" style={{ marginTop: 4, fontSize: 10.5, color: "var(--faint)" }}>
+                {uploadProgress.tagged} / {uploadProgress.total} tagged ({Math.round((uploadProgress.tagged / uploadProgress.total) * 100)}%) — streaming in batches of 10
+              </div>
             </div>
           )}
           {uploadMsg && (
