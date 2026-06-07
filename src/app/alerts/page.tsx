@@ -33,9 +33,6 @@ export default function AlertStudioPage() {
   const [severity, setSeverity] = useState<"low" | "medium" | "high">("medium");
   const [recipients, setRecipients] = useState("");
   const [creating, setCreating] = useState(false);
-  const [testEmail, setTestEmail] = useState("");
-  const [testStatus, setTestStatus] = useState<string | null>(null);
-  const [testBusy, setTestBusy] = useState(false);
 
   const refresh = useCallback(async () => {
     const res = await fetch("/api/alerts/config");
@@ -59,22 +56,6 @@ export default function AlertStudioPage() {
   async function toggle(id: string, enabled: boolean) {
     await fetch("/api/alerts/config", { method: "PATCH", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id, enabled }) });
     await refresh();
-  }
-
-  async function sendTest() {
-    setTestBusy(true);
-    setTestStatus(null);
-    const recips = testEmail.split(",").map((r) => r.trim()).filter(Boolean);
-    const res = await fetch("/api/alerts/test-email", {
-      method: "POST", headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ recipients: recips }),
-    });
-    const data = await res.json();
-    setTestBusy(false);
-    if (data.error) setTestStatus(`✕ ${data.error}`);
-    else if (data.result?.simulated) setTestStatus("✓ Simulated send (no RESEND_API_KEY configured) — logged server-side as if delivered. Add RESEND_API_KEY to send real emails.");
-    else if (data.result?.ok) setTestStatus(`✓ Sent via Resend (id: ${data.result.providerId})`);
-    else setTestStatus(`✕ ${data.result?.error || "Send failed"}`);
   }
 
   return (
@@ -146,20 +127,6 @@ export default function AlertStudioPage() {
             </button>
           </div>
 
-          {/* Test email */}
-          <h2 className="df" style={{ fontWeight: 800, fontSize: 19, color: "var(--ink)", margin: "28px 0 14px" }}>Test delivery</h2>
-          <div className="card" style={{ padding: 22 }}>
-            <p style={{ fontSize: 12.5, color: "var(--muted)", marginBottom: 12, lineHeight: 1.5 }}>
-              Send a sample alert email to confirm delivery is wired correctly before relying on it live.
-            </p>
-            <div style={{ display: "flex", gap: 10 }}>
-              <input type="text" placeholder="you@amex.com" value={testEmail} onChange={(e) => setTestEmail(e.target.value)} style={{ flex: 1, border: "1px solid var(--line)", borderRadius: 9, padding: "9px 10px", fontSize: 13 }} />
-              <button onClick={sendTest} disabled={testBusy} className="df" style={{ background: "var(--ink)", color: "#fff", border: "none", borderRadius: 9, padding: "9px 18px", fontWeight: 700, fontSize: 13, cursor: "pointer" }}>
-                {testBusy ? "Sending…" : "Send test"}
-              </button>
-            </div>
-            {testStatus && <div className="mono" style={{ fontSize: 11.5, marginTop: 10, color: testStatus.startsWith("✓") ? "var(--good)" : "var(--bad)", lineHeight: 1.5 }}>{testStatus}</div>}
-          </div>
         </div>
 
         {/* Existing configs */}

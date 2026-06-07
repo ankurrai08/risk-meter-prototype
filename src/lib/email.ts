@@ -1,7 +1,16 @@
 // Email delivery for fired alerts.
-// Uses Resend's REST API when RESEND_API_KEY is set; otherwise runs in
-// "simulated delivery" mode (logs the would-be email, marks as delivered)
-// so the demo flow works end-to-end without a live provider configured.
+//
+// Sends via SMTP (Gmail) using nodemailer when SMTP_USER / SMTP_PASS are
+// configured — e.g. raiankur21@gmail.com sending to ankur.rai1@aexp.com.
+// Gmail requires a 16-character "App Password" (Google Account → Security →
+// 2-Step Verification → App passwords) since normal account passwords are
+// rejected for SMTP when 2FA is enabled.
+//
+// Without SMTP credentials configured, the module runs in "simulated
+// delivery" mode (logs the would-be email, marks as delivered) so the demo
+// flow works end-to-end without a live mail account configured.
+
+import nodemailer, { type Transporter } from "nodemailer";
 
 export type AlertEmailPayload = {
   to: string[];
@@ -49,14 +58,37 @@ function renderEmailHtml(p: AlertEmailPayload): string {
   </div>`;
 }
 
+// SMTP transport is created lazily and cached — env vars are read at call time
+// so the module works whether or not credentials are present at boot.
+let cachedTransporter: Transporter | null = null;
+let cachedKey = "";
+
+function getTransporter(user: string, pass: string, host: string, port: number): Transporter {
+  const key = `${host}:${port}:${user}`;
+  if (cachedTransporter && cachedKey === key) return cachedTransporter;
+  cachedTransporter = nodemailer.createTransport({
+    host,
+    port,
+    secure: port === 465, // true for 465 (implicit TLS), false for 587 (STARTTLS)
+    auth: { user, pass },
+  });
+  cachedKey = key;
+  return cachedTransporter;
+}
+
 export async function sendAlertEmail(payload: AlertEmailPayload): Promise<EmailResult> {
-  const apiKey = process.env.RESEND_API_KEY;
-  const from = process.env.ALERT_EMAIL_FROM || "Risk Meter <alerts@resend.dev>";
+  // SMTP_USER / SMTP_PASS are the canonical names; GMAIL_USER / GMAIL_APP_PASSWORD
+  // are accepted as friendlier aliases for a Gmail-specific setup.
+  const user = process.env.SMTP_USER || process.env.GMAIL_USER;
+  const pass = process.env.SMTP_PASS || process.env.GMAIL_APP_PASSWORD;
+  const host = process.env.SMTP_HOST || "smtp.gmail.com";
+  const port = Number(process.env.SMTP_PORT) || 465;
+  const from = process.env.ALERT_EMAIL_FROM || (user ? `Risk Meter <${user}>` : "Risk Meter <alerts@resend.dev>");
   const html = renderEmailHtml(payload);
   const subject = `[Risk Meter · ${payload.severity.toUpperCase()}] ${payload.theme} — ${payload.type} alert`;
 
-  if (!apiKey) {
-    // Simulated delivery — no provider configured. Still "delivers" so the
+  if (!user || !pass) {
+    // Simulated delivery — no SMTP account configured. Still "delivers" so the
     // demo flow completes; logs what would have been sent.
     console.log("[email:simulated]", { to: payload.to, subject });
     return { ok: true, simulated: true };
@@ -67,20 +99,14 @@ export async function sendAlertEmail(payload: AlertEmailPayload): Promise<EmailR
   }
 
   try {
-    const res = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ from, to: payload.to, subject, html }),
+    const transporter = getTransporter(user, pass, host, port);
+    const info = await transporter.sendMail({
+      from,
+      to: payload.to.join(", "),
+      subject,
+      html,
     });
-    if (!res.ok) {
-      const text = await res.text();
-      return { ok: false, simulated: false, error: `Resend ${res.status}: ${text}` };
-    }
-    const json = await res.json();
-    return { ok: true, simulated: false, providerId: json.id };
+    return { ok: true, simulated: false, providerId: info.messageId };
   } catch (err) {
     return { ok: false, simulated: false, error: (err as Error).message };
   }

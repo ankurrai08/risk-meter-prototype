@@ -4,22 +4,33 @@ A working prototype of "Risk Meter" — a capability inside Amex's Customer Inte
 
 ## What's inside
 
-- **Live Surveillance dashboard** (`/`) — animated risk gauge, per-theme breakdown, live replay controls (play/pause/speed), live feed table, and an upgraded **Decision Console**: evidence, suggested playbook, candidate-action cards scored across four tradeoff dimensions (customer impact, effort, cost, time-to-effect), an **Action Engine** that routes each decision down one of three paths (Alert / Automate-with-human-in-the-loop / Research), plus the original Approve/Override/Escalate flow
-- **Alert Studio** (`/alerts`) — configure threshold / spike / emerging-pattern alerts per taxonomy theme, set severity & email recipients, send a test email, view fired alerts and delivery status
+- **Live Surveillance dashboard** (`/`) — animated risk gauge, per-theme breakdown, live replay controls (play/pause/speed), a **"Load different dataset (CSV)"** uploader that swaps in your own interaction/root-cause file and re-tags it live, live feed table, and an upgraded **Decision Console**: evidence, suggested playbook, candidate-action cards scored across four tradeoff dimensions (customer impact, effort, cost, time-to-effect), an **Action Engine** that routes each decision down one of three paths (Alert / Automate-with-human-in-the-loop / Research), plus the original Approve/Override/Escalate flow
+- **Alert Studio** (`/alerts`) — configure threshold / spike / emerging-pattern alerts per taxonomy theme, set severity & email recipients, view fired alerts and delivery status
 - **Trigger Studio — Anticipate** (`/triggers`) — pre-arm time-boxed, event-scoped sensitivity monitors ahead of known events (a Platinum refresh, a rate move, a policy change…). Armed monitors temporarily lower the effective detection threshold for a theme (standing threshold ÷ sensitivity multiplier) and can even surface "anticipatory catches" on themes with no standing alert configured. Monitors auto-disarm when their window expires.
 - **Measure & Learn** (`/learn`) — closes the loop on every approved action: snapshots the theme's rolling rate at decision time (the baseline), samples it on subsequent ticks, and once enough samples land, records whether the rate moved in the right direction (`delta_pct`, `was_recommendation_correct`) — feeding a growing feedback store that the tradeoff scoring can learn from over time
 - **Audit Log** (`/audit`) — full governance trail plus a **Shadow Mode** badge, four impact tiles (interactions processed, PII items redacted, items flagged for human review, audit entries this session), and a **PII/PHI posture panel** showing redaction counts by entity type
 
 ## How it works
 
-1. **Data**: 400 sampled real CIE root-cause interactions (`src/data/interactions_sample.json`) and the 53-node / 13-theme distilled risk taxonomy (`src/data/taxonomy.json`), both converted from the source Excel files.
+1. **Data**: 400 sampled real CIE root-cause interactions (`src/data/interactions_sample.json`) and the 53-node / 13-theme distilled risk taxonomy (`src/data/taxonomy.json`), both converted from the source Excel files. You can also swap in your own dataset live from the dashboard — see "Loading a different dataset" below.
 2. **Stage 0 — PII/PHI redaction gate**: before any root-cause text reaches a model, a deterministic regex layer detects and tokenizes sensitive entities (card numbers, SSNs, emails, phone numbers, account numbers — `[CARD_0001]`-style tokens). Only entity-type counts are ever logged; actual values never are. Person-name detection is stubbed behind the same interface for a future NER upgrade.
-3. **Two-stage tagging pipeline** (`scripts/tag-interactions.mjs`): Stage 1 normalizes each redacted root cause into a canonical statement + key phrase; Stage 2 tags the canonical statement to exactly one taxonomy node with a confidence score. Uses OpenAI structured outputs (`gpt-4o-mini`) when `OPENAI_API_KEY` is set, otherwise falls back to a deterministic keyword-overlap heuristic — either way the output is cached to `src/data/tagged_interactions.json` so the live demo never depends on API latency.
-4. **Live replay engine** (`src/lib/store.ts`): an in-memory singleton that "streams" the cached tagged interactions, maintains a rolling 60-item window (with a 120-item trailing baseline), computes per-theme risk percentages, and evaluates both standing alert rules and armed Trigger Studio monitors on every tick.
-5. **Alerts**: three types — *threshold breach* (rolling % crosses a configured line), *spike/anomaly* (vs. trailing baseline), and *emerging/unmapped pattern* (recurring low-confidence root causes that don't map cleanly to the taxonomy — the "blind to the new" gap). Firing an alert triggers an email via the Resend API (or a simulated/logged delivery if `RESEND_API_KEY` isn't set).
+3. **Two-stage tagging pipeline** (`scripts/tag-interactions.mjs` for the seed dataset, `src/lib/tagging.ts` for live uploads): Stage 1 normalizes each redacted root cause into a canonical statement + key phrase; Stage 2 tags the canonical statement to exactly one taxonomy node with a confidence score. Uses OpenAI structured outputs (`gpt-4o-mini`) when `OPENAI_API_KEY` is set, otherwise falls back to a deterministic keyword-overlap heuristic. The seed dataset's tags are cached to `src/data/tagged_interactions.json` so the baseline demo never depends on API latency; uploaded datasets are tagged on the fly using the same pipeline.
+4. **Live replay engine** (`src/lib/store.ts`): an in-memory singleton that "streams" the tagged interactions, maintains a rolling 60-item window (with a 120-item trailing baseline), computes per-theme risk percentages, and evaluates both standing alert rules and armed Trigger Studio monitors on every tick.
+5. **Alerts**: three types — *threshold breach* (rolling % crosses a configured line), *spike/anomaly* (vs. trailing baseline), and *emerging/unmapped pattern* (recurring low-confidence root causes that don't map cleanly to the taxonomy — the "blind to the new" gap). Firing an alert sends an email via SMTP (or a simulated/logged delivery if SMTP credentials aren't configured).
 6. **Decision Console + Action Engine**: each fired alert carries 2-3 candidate actions, each scored on customer impact / effort / cost / time-to-effect and tagged with a recommended path. A leader picks an action, then routes it through Alert (send notification), Automate-HITL (queue an automated workflow that still requires human sign-off), or Research (commission deeper analysis) — every path is logged with the named approver.
 7. **Measure & Learn**: approving an action snapshots the theme's current rolling rate as a baseline and begins sampling it on every subsequent tick. After six samples the loop resolves into a `FeedbackEntry` recording the rate's delta and whether the recommendation was borne out — visible on `/learn` as both in-flight sparklines and a resolved feedback store.
-8. **Governance**: low-confidence tags are routed to "needs human review"; every redaction, tag, alert, delivery, trigger arm/expiry, action taken, outcome, config change, and decision is written to the append-only audit log. The Audit Log surfaces a Shadow Mode badge, impact tiles, and a PII posture panel summarizing redaction activity by entity type.
+8. **Governance**: low-confidence tags are routed to "needs human review"; every redaction, tag, alert, delivery, trigger arm/expiry, action taken, outcome, config change, dataset load, and decision is written to the append-only audit log. The Audit Log surfaces a Shadow Mode badge, impact tiles, and a PII posture panel summarizing redaction activity by entity type.
+
+### Loading a different dataset
+
+The hero control strip on the dashboard has a **"⤴ Load different dataset (CSV)"** button. Pick a CSV with the columns `interaction_id, type, date, root_cause` (header row required, up to 300 data rows per upload), and the app will:
+
+1. Parse and validate the file (`/api/dataset/upload`)
+2. Run every row through the same redaction → normalization → taxonomy-tagging pipeline used for the seed data — live OpenAI (`gpt-4o-mini`) if `OPENAI_API_KEY` is set, otherwise the deterministic heuristic fallback
+3. Replace the in-memory replay feed with the newly tagged interactions and restart the replay from the top
+4. Log the swap (filename, row count, tagging method, review-flag count) to the audit trail
+
+This is a fully in-memory swap — no files are written to disk, and resetting/reloading the server restores the original 400-interaction seed dataset.
 
 ## Running locally
 
@@ -40,15 +51,19 @@ OPENAI_API_KEY=sk-... node scripts/tag-interactions.mjs
 node scripts/tag-interactions.mjs --heuristic
 ```
 
-This regenerates `src/data/tagged_interactions.json`, which the app reads at build/runtime (no live LLM calls during the demo).
+This regenerates `src/data/tagged_interactions.json`, which the app reads at build/runtime as the seed dataset (no live LLM calls needed for the baseline demo). Setting `OPENAI_API_KEY` at runtime *also* switches on live LLM tagging for the dashboard's CSV-upload feature (`src/lib/tagging.ts`) — both paths share the same prompts and JSON-schema outputs, so uploaded data is tagged consistently with the seed dataset.
 
 ## Environment variables
 
 | Variable | Purpose | Required? |
 |---|---|---|
-| `OPENAI_API_KEY` | Used only by the offline tagging script (`scripts/tag-interactions.mjs`) to (re)generate cached tags via the real LLM pipeline | No — heuristic fallback works without it |
-| `RESEND_API_KEY` | Enables real email delivery for fired alerts via [Resend](https://resend.com) | No — falls back to simulated delivery (logged to console + audit trail) |
-| `ALERT_EMAIL_FROM` | "From" address for alert emails (e.g. `Risk Meter <alerts@yourdomain.com>`) | Only if `RESEND_API_KEY` is set |
+| `OPENAI_API_KEY` | Enables live LLM tagging (`gpt-4o-mini`, structured outputs) for (a) the offline seed-dataset script (`scripts/tag-interactions.mjs`) and (b) the dashboard's "Load different dataset (CSV)" upload feature | No — heuristic keyword-overlap fallback works without it for both paths |
+| `SMTP_USER` (or `GMAIL_USER`) | SMTP login / "from" address used to send alert emails (e.g. your Gmail address) | No — falls back to simulated delivery (logged to console + audit trail) |
+| `SMTP_PASS` (or `GMAIL_APP_PASSWORD`) | SMTP password — for Gmail, a 16-character [App Password](https://myaccount.google.com/apppasswords) (requires 2-Step Verification), not your regular account password | Only if `SMTP_USER`/`GMAIL_USER` is set |
+| `SMTP_HOST` | SMTP server hostname | No — defaults to `smtp.gmail.com` |
+| `SMTP_PORT` | SMTP server port | No — defaults to `465` (implies TLS) |
+
+Email delivery uses [nodemailer](https://nodemailer.com) over SMTP — by default configured to send from a Gmail account (`SMTP_USER`/`GMAIL_USER`) using an App Password. To send from `raiankur21@gmail.com` to an enterprise inbox like `ankur.rai1@aexp.com`, set `SMTP_USER=raiankur21@gmail.com` and `SMTP_PASS=<App Password>`, and configure the alert recipient as `ankur.rai1@aexp.com` in **Alert Studio**. If no SMTP credentials are set, alerts still fire and are logged to the audit trail with simulated delivery — the demo never blocks on email.
 
 ## Deploying to Vercel
 

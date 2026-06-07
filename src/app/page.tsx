@@ -32,7 +32,10 @@ export default function DashboardPage() {
   const [speed, setSpeed] = useState(2); // interactions per tick
   const [openAlert, setOpenAlert] = useState<ConsoleAlert | null>(null);
   const [flash, setFlash] = useState(false);
+  const [uploading, setUploading] = useState(false);
+  const [uploadMsg, setUploadMsg] = useState<{ ok: boolean; text: string } | null>(null);
   const timer = useRef<ReturnType<typeof setInterval> | null>(null);
+  const fileInput = useRef<HTMLInputElement | null>(null);
 
   const refresh = useCallback(async () => {
     const res = await fetch("/api/state");
@@ -68,6 +71,32 @@ export default function DashboardPage() {
     setPlaying(false);
     await fetch("/api/replay/reset", { method: "POST" });
     await refresh();
+  }
+
+  async function uploadDataset(file: File) {
+    setPlaying(false);
+    setUploading(true);
+    setUploadMsg(null);
+    try {
+      const fd = new FormData();
+      fd.append("file", file);
+      const res = await fetch("/api/dataset/upload", { method: "POST", body: fd });
+      const data = await res.json();
+      if (!res.ok) {
+        setUploadMsg({ ok: false, text: data.error || "Upload failed." });
+      } else {
+        setUploadMsg({
+          ok: true,
+          text: `Loaded ${data.loaded} interactions from "${data.filename}" — tagged via ${data.used_llm ? "live OpenAI (gpt-4o-mini)" : "heuristic fallback (set OPENAI_API_KEY for live tagging)"}, ${data.needs_review} flagged for review${data.truncated ? ` (file truncated to first ${data.truncated_to} rows)` : ""}. Replay restarted.`,
+        });
+      }
+    } catch {
+      setUploadMsg({ ok: false, text: "Upload failed — check your connection and try again." });
+    } finally {
+      setUploading(false);
+      if (fileInput.current) fileInput.current.value = "";
+      await refresh();
+    }
   }
 
   async function recordDecision(action: "approve" | "override" | "escalate", note: string) {
@@ -127,12 +156,37 @@ export default function DashboardPage() {
             <button onClick={reset} className="mono" style={{ background: "none", border: "none", color: "var(--muted)", fontSize: 12, cursor: "pointer", textDecoration: "underline" }}>
               reset replay
             </button>
+            <span style={{ width: 1, height: 20, background: "var(--line)" }} />
+            <input
+              ref={fileInput}
+              type="file"
+              accept=".csv,text/csv"
+              style={{ display: "none" }}
+              onChange={(e) => { const f = e.target.files?.[0]; if (f) uploadDataset(f); }}
+            />
+            <button
+              onClick={() => fileInput.current?.click()}
+              disabled={uploading}
+              className="mono"
+              style={{ background: "#fff", border: "1px solid var(--line)", color: "var(--ink)", borderRadius: 10, padding: "9px 16px", fontSize: 12, cursor: uploading ? "default" : "pointer", fontWeight: 600 }}
+              title="Load a different interaction-root-cause CSV — replaces the replay dataset and re-tags every row"
+            >
+              {uploading ? "Tagging upload…" : "⤴ Load different dataset (CSV)"}
+            </button>
           </div>
           {agg && (
             <div className="mono" style={{ marginTop: 18, fontSize: 11.5, color: "var(--faint)" }}>
               {agg.cursor.toLocaleString()} / {agg.total.toLocaleString()} interactions replayed ({progressPct}%) · rolling window: last {agg.window_size}
             </div>
           )}
+          {uploadMsg && (
+            <div className="mono" style={{ marginTop: 10, fontSize: 11.5, lineHeight: 1.6, color: uploadMsg.ok ? "var(--good)" : "var(--bad)", maxWidth: 560 }}>
+              {uploadMsg.ok ? "✓ " : "✗ "}{uploadMsg.text}
+            </div>
+          )}
+          <div className="mono" style={{ marginTop: 8, fontSize: 10.5, color: "var(--faint)", maxWidth: 560, lineHeight: 1.6 }}>
+            CSV columns expected: interaction_id, type, date, root_cause — each row is normalized and tagged against the taxonomy (live OpenAI if OPENAI_API_KEY is configured, heuristic fallback otherwise) before replacing the replay feed.
+          </div>
         </div>
 
         <div className="card" style={{ padding: "22px 24px 18px", position: "relative", overflow: "hidden" }}

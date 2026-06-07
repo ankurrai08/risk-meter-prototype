@@ -218,6 +218,17 @@ class RiskMeterStore {
     this.log("decision", "Replay reset to start.");
   }
 
+  /** Swap in a freshly uploaded + tagged dataset and restart the replay from the top. */
+  loadDataset(items: TaggedInteraction[], meta: { filename: string; usedLLM: boolean; needsReview: number }) {
+    this.all = items;
+    this.reset();
+    this.log(
+      "decision",
+      `Loaded uploaded dataset "${meta.filename}" — ${items.length} interactions tagged via ${meta.usedLLM ? "live OpenAI (gpt-4o-mini)" : "heuristic fallback"} (${meta.needsReview} flagged needs_review). Replay restarted from the top.`,
+      { filename: meta.filename, count: items.length, used_llm: meta.usedLLM, needs_review: meta.needsReview }
+    );
+  }
+
   log(kind: AuditEntry["kind"], summary: string, detail?: Record<string, unknown>) {
     this.audit.unshift({
       id: `a-${this.audit.length}-${Date.now()}`,
