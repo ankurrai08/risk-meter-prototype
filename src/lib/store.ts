@@ -119,6 +119,8 @@ export type AuditEntry = {
   detail?: Record<string, unknown>;
 };
 
+const DEFAULT_RECIPIENT = "ankur.rai1@aexp.com"; // demo default — alerts and trigger notifications route here unless overridden in Alert Studio / Trigger Studio
+
 const ROLLING_WINDOW = 60; // last N interactions used for rolling % calc
 const BASELINE_WINDOW = 120; // wider trailing window for spike comparison
 const OUTCOME_TREND_LENGTH = 6; // snapshots captured before an outcome is "resolved"
@@ -152,6 +154,7 @@ class RiskMeterStore {
   audit: AuditEntry[] = [];
   knownThemeSet = new Set(themes);
   emergingClusterCounts: Record<string, number> = {};
+  emergingAlerted: Set<string> = new Set();
   redactionTotals: Record<string, number> = {};
   redactedCount = 0;
 
@@ -176,7 +179,7 @@ class RiskMeterStore {
         spike_multiplier: 2,
         severity: i === 2 ? "high" : "medium",
         channel: "email",
-        recipients: [],
+        recipients: [DEFAULT_RECIPIENT],
         enabled: true,
         created_at: new Date().toISOString(),
       });
@@ -186,7 +189,7 @@ class RiskMeterStore {
   private seedDefaultTriggerMonitors() {
     // One pre-armed event monitor so Trigger Studio isn't empty on first load —
     // demonstrates "anticipate" rather than "wait and react".
-    const theme = themes.find((t) => /payment|billing|pricing/i.test(t)) ?? themes[0];
+    const theme = themes.find((t) => /dissatisfaction|reputational/i.test(t)) ?? themes[0];
     const now = Date.now();
     this.triggerMonitors.push({
       id: "trig-seed-0",
@@ -194,7 +197,7 @@ class RiskMeterStore {
       label: "Platinum card refresh — Q3 cohort",
       theme,
       sensitivity_multiplier: 1.6,
-      recipients: [],
+      recipients: [DEFAULT_RECIPIENT],
       armed: true,
       created_at: new Date(now - 1000 * 60 * 60 * 6).toISOString(),
       expires_at: new Date(now + 1000 * 60 * 60 * 24 * 6).toISOString(),
@@ -209,6 +212,7 @@ class RiskMeterStore {
     this.feedback = [];
     this.audit = [];
     this.emergingClusterCounts = {};
+    this.emergingAlerted = new Set();
     this.redactionTotals = {};
     this.redactedCount = 0;
     this.log("decision", "Replay reset to start.");
@@ -426,7 +430,7 @@ class RiskMeterStore {
 
     // 2) Emerging-pattern alerts (no pre-config — system-detected)
     for (const [phrase, count] of Object.entries(this.emergingClusterCounts)) {
-      if (count === 4) {
+      if (count >= 4 && !this.emergingAlerted.has(phrase)) {
         const evidence = this.seen
           .filter((x) => x.needs_review && x.normalized.key_phrase.toLowerCase().trim() === phrase)
           .slice(-4);
@@ -446,6 +450,7 @@ class RiskMeterStore {
           delivered: false,
         };
         fired.push(alert);
+        this.emergingAlerted.add(phrase);
       }
     }
 

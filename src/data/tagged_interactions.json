@@ -1525,6 +1525,31 @@
     "needs_review": true
   },
   {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AESPLT001",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "Customer said the Platinum refresh raised their annual fee by $200 without adding any benefit they would actually use, and felt blindsided that the change wasn't proactively explained.",
+    "normalized": {
+      "canonical_statement": "Customer said the Platinum refresh raised their annual fee by $200 without adding any benefit they would actually use, and felt blindsided that the change wasn't proactively explained.",
+      "key_phrase": "platinum refresh fee",
+      "entities": [
+        "platinum",
+        "refresh",
+        "fee"
+      ]
+    },
+    "tag": {
+      "theme": "Customer dissatisfaction and reputational escalation",
+      "l1": "Reputational",
+      "l2": "Reputation",
+      "l3": "Customer Dissatisfaction",
+      "l4": null,
+      "confidence": 0.66,
+      "rationale": "Keyword overlap with \"Reputational — Reputation\" signal patterns; recurring Platinum-refresh fee/benefit-change language (heuristic placeholder for LLM tagging)."
+    },
+    "needs_review": false
+  },
+  {
     "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES005CT4",
     "type": "Voice",
     "date": "2026-05-30T00:00:00",
@@ -1646,6 +1671,31 @@
       "l4": "Customer Identity and Access",
       "confidence": 0.77,
       "rationale": "Keyword overlap with \"Operational and Compliance — Information and Cyber Security\" signal patterns (heuristic placeholder for LLM tagging)."
+    },
+    "needs_review": false
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AESPLT002",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "Customer was upset that the refreshed Platinum benefits swapped their preferred airport lounge network for one with no locations near their home airport, calling it a downgrade dressed up as an upgrade.",
+    "normalized": {
+      "canonical_statement": "Customer was upset that the refreshed Platinum benefits swapped their preferred airport lounge network for one with no locations near their home airport, calling it a downgrade dressed up as an upgrade.",
+      "key_phrase": "platinum benefits downgrade",
+      "entities": [
+        "platinum",
+        "refresh",
+        "benefits"
+      ]
+    },
+    "tag": {
+      "theme": "Customer dissatisfaction and reputational escalation",
+      "l1": "Reputational",
+      "l2": "Reputation",
+      "l3": "Customer Dissatisfaction",
+      "l4": null,
+      "confidence": 0.66,
+      "rationale": "Keyword overlap with \"Reputational — Reputation\" signal patterns; recurring Platinum-refresh fee/benefit-change language (heuristic placeholder for LLM tagging)."
     },
     "needs_review": false
   },
@@ -1775,6 +1825,31 @@
     "needs_review": false
   },
   {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AESPLT003",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "Customer said the Platinum card refresh removed a travel credit they relied on every year and felt the relationship had been quietly devalued without meaningful notice.",
+    "normalized": {
+      "canonical_statement": "Customer said the Platinum card refresh removed a travel credit they relied on every year and felt the relationship had been quietly devalued without meaningful notice.",
+      "key_phrase": "platinum refresh devalued",
+      "entities": [
+        "platinum",
+        "refresh",
+        "fee"
+      ]
+    },
+    "tag": {
+      "theme": "Customer dissatisfaction and reputational escalation",
+      "l1": "Reputational",
+      "l2": "Reputation",
+      "l3": "Customer Dissatisfaction",
+      "l4": null,
+      "confidence": 0.66,
+      "rationale": "Keyword overlap with \"Reputational — Reputation\" signal patterns; recurring Platinum-refresh fee/benefit-change language (heuristic placeholder for LLM tagging)."
+    },
+    "needs_review": false
+  },
+  {
     "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00446J",
     "type": "Voice",
     "date": "2026-05-29T00:00:00",
@@ -1871,6 +1946,31 @@
       "l4": "Fairness & Lawfulness",
       "confidence": 0.69,
       "rationale": "Keyword overlap with \"Operational and Compliance — Privacy\" signal patterns (heuristic placeholder for LLM tagging)."
+    },
+    "needs_review": false
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AESPLT004",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "Customer told the rep they had posted on social media that Amex \"bait and switched\" them with the Platinum refresh — higher fee, fewer credits they personally use.",
+    "normalized": {
+      "canonical_statement": "Customer told the rep they had posted on social media that Amex \"bait and switched\" them with the Platinum refresh — higher fee, fewer credits they personally use.",
+      "key_phrase": "platinum refresh switch",
+      "entities": [
+        "platinum",
+        "refresh",
+        "benefits"
+      ]
+    },
+    "tag": {
+      "theme": "Customer dissatisfaction and reputational escalation",
+      "l1": "Reputational",
+      "l2": "Reputation",
+      "l3": "Customer Dissatisfaction",
+      "l4": null,
+      "confidence": 0.66,
+      "rationale": "Keyword overlap with \"Reputational — Reputation\" signal patterns; recurring Platinum-refresh fee/benefit-change language (heuristic placeholder for LLM tagging)."
     },
     "needs_review": false
   },
@@ -1975,6 +2075,31 @@
     "needs_review": true
   },
   {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AESPLT005",
+    "type": "Voice",
+    "date": "2026-06-05T00:00:00",
+    "root_cause": "Customer escalated after a long hold trying to understand how the new Platinum benefit structure affects their upcoming renewal, and said the experience alone made them consider switching issuers.",
+    "normalized": {
+      "canonical_statement": "Customer escalated after a long hold trying to understand how the new Platinum benefit structure affects their upcoming renewal, and said the experience alone made them consider switching issuers.",
+      "key_phrase": "platinum refresh renewal",
+      "entities": [
+        "platinum",
+        "refresh",
+        "fee"
+      ]
+    },
+    "tag": {
+      "theme": "Customer dissatisfaction and reputational escalation",
+      "l1": "Reputational",
+      "l2": "Reputation",
+      "l3": "Customer Dissatisfaction",
+      "l4": null,
+      "confidence": 0.66,
+      "rationale": "Keyword overlap with \"Reputational — Reputation\" signal patterns; recurring Platinum-refresh fee/benefit-change language (heuristic placeholder for LLM tagging)."
+    },
+    "needs_review": false
+  },
+  {
     "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00BN14",
     "type": "Voice",
     "date": "2026-06-03T00:00:00",
@@ -2071,6 +2196,31 @@
       "l4": "Customer Identity and Access",
       "confidence": 0.64,
       "rationale": "Keyword overlap with \"Operational and Compliance — Information and Cyber Security\" signal patterns (heuristic placeholder for LLM tagging)."
+    },
+    "needs_review": false
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AESPLT006",
+    "type": "Voice",
+    "date": "2026-06-06T00:00:00",
+    "root_cause": "Customer was frustrated that concierge support could not clearly explain which of the old Platinum perks still apply after the refresh, leaving them confused and distrustful of the program.",
+    "normalized": {
+      "canonical_statement": "Customer was frustrated that concierge support could not clearly explain which of the old Platinum perks still apply after the refresh, leaving them confused and distrustful of the program.",
+      "key_phrase": "platinum benefits confused",
+      "entities": [
+        "platinum",
+        "refresh",
+        "benefits"
+      ]
+    },
+    "tag": {
+      "theme": "Customer dissatisfaction and reputational escalation",
+      "l1": "Reputational",
+      "l2": "Reputation",
+      "l3": "Customer Dissatisfaction",
+      "l4": null,
+      "confidence": 0.66,
+      "rationale": "Keyword overlap with \"Reputational — Reputation\" signal patterns; recurring Platinum-refresh fee/benefit-change language (heuristic placeholder for LLM tagging)."
     },
     "needs_review": false
   },
@@ -2175,6 +2325,31 @@
     "needs_review": false
   },
   {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AESPLT007",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "Customer, a cardmember of over a decade, said the Platinum refresh felt like it was designed for new applicants at the expense of long-time loyal customers like them.",
+    "normalized": {
+      "canonical_statement": "Customer, a cardmember of over a decade, said the Platinum refresh felt like it was designed for new applicants at the expense of long-time loyal customers like them.",
+      "key_phrase": "platinum refresh loyal",
+      "entities": [
+        "platinum",
+        "refresh",
+        "fee"
+      ]
+    },
+    "tag": {
+      "theme": "Customer dissatisfaction and reputational escalation",
+      "l1": "Reputational",
+      "l2": "Reputation",
+      "l3": "Customer Dissatisfaction",
+      "l4": null,
+      "confidence": 0.66,
+      "rationale": "Keyword overlap with \"Reputational — Reputation\" signal patterns; recurring Platinum-refresh fee/benefit-change language (heuristic placeholder for LLM tagging)."
+    },
+    "needs_review": false
+  },
+  {
     "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00CTBN",
     "type": "Voice",
     "date": "2026-06-04T00:00:00",
@@ -2271,6 +2446,31 @@
       "l4": "Transaction Details",
       "confidence": 0.69,
       "rationale": "Keyword overlap with \"Operational and Compliance — Processing, Execution and Change\" signal patterns (heuristic placeholder for LLM tagging)."
+    },
+    "needs_review": false
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AESPLT008",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "Customer compared the refreshed Platinum benefits unfavorably to a competitor's card during the call and asked for a retention offer, threatening to close the account otherwise.",
+    "normalized": {
+      "canonical_statement": "Customer compared the refreshed Platinum benefits unfavorably to a competitor's card during the call and asked for a retention offer, threatening to close the account otherwise.",
+      "key_phrase": "platinum refresh retention",
+      "entities": [
+        "platinum",
+        "refresh",
+        "benefits"
+      ]
+    },
+    "tag": {
+      "theme": "Customer dissatisfaction and reputational escalation",
+      "l1": "Reputational",
+      "l2": "Reputation",
+      "l3": "Customer Dissatisfaction",
+      "l4": null,
+      "confidence": 0.66,
+      "rationale": "Keyword overlap with \"Reputational — Reputation\" signal patterns; recurring Platinum-refresh fee/benefit-change language (heuristic placeholder for LLM tagging)."
     },
     "needs_review": false
   },
@@ -2900,6 +3100,31 @@
     "needs_review": false
   },
   {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AESAIA001",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "Customer said the new in-app AI assistant told them their account balance was current when it was actually past due, and they only learned otherwise from a later collections call.",
+    "normalized": {
+      "canonical_statement": "Customer said the new in-app AI assistant told them their account balance was current when it was actually past due, and they only learned otherwise from a later collections call.",
+      "key_phrase": "ai assistant wrong",
+      "entities": [
+        "assistant",
+        "wrong",
+        "balance"
+      ]
+    },
+    "tag": {
+      "theme": "Customer identity and access",
+      "l1": "Operational and Compliance",
+      "l2": "Information and Cyber Security",
+      "l3": "Information and Cyber Security Protect",
+      "l4": "Customer Identity and Access",
+      "confidence": 0.52,
+      "rationale": "Low keyword overlap with any single taxonomy node — recurring complaints about a new in-app AI assistant giving incorrect account information don't map cleanly to an existing signal pattern (heuristic placeholder for LLM tagging)."
+    },
+    "needs_review": true
+  },
+  {
     "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00D53I",
     "type": "Voice",
     "date": "2026-06-04T00:00:00",
@@ -3025,6 +3250,31 @@
     "needs_review": false
   },
   {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AESAIA002",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "Customer asked the in-app AI assistant about a disputed charge and said it gave a confident but completely wrong answer about the dispute status, sending them in circles before reaching a human.",
+    "normalized": {
+      "canonical_statement": "Customer asked the in-app AI assistant about a disputed charge and said it gave a confident but completely wrong answer about the dispute status, sending them in circles before reaching a human.",
+      "key_phrase": "ai assistant wrong",
+      "entities": [
+        "assistant",
+        "wrong",
+        "balance"
+      ]
+    },
+    "tag": {
+      "theme": "Customer identity and access",
+      "l1": "Operational and Compliance",
+      "l2": "Information and Cyber Security",
+      "l3": "Information and Cyber Security Protect",
+      "l4": "Customer Identity and Access",
+      "confidence": 0.52,
+      "rationale": "Low keyword overlap with any single taxonomy node — recurring complaints about a new in-app AI assistant giving incorrect account information don't map cleanly to an existing signal pattern (heuristic placeholder for LLM tagging)."
+    },
+    "needs_review": true
+  },
+  {
     "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES007C44",
     "type": "Voice",
     "date": "2026-06-01T00:00:00",
@@ -3144,6 +3394,31 @@
       "rationale": "Keyword overlap with \"Operational and Compliance — Information and Cyber Security\" signal patterns (heuristic placeholder for LLM tagging)."
     },
     "needs_review": false
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AESAIA003",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "Customer said the AI assistant inside the app misread their rewards balance by a wide margin and recommended a redemption that wasn't actually available to them.",
+    "normalized": {
+      "canonical_statement": "Customer said the AI assistant inside the app misread their rewards balance by a wide margin and recommended a redemption that wasn't actually available to them.",
+      "key_phrase": "ai assistant wrong",
+      "entities": [
+        "assistant",
+        "wrong",
+        "balance"
+      ]
+    },
+    "tag": {
+      "theme": "Customer identity and access",
+      "l1": "Operational and Compliance",
+      "l2": "Information and Cyber Security",
+      "l3": "Information and Cyber Security Protect",
+      "l4": "Customer Identity and Access",
+      "confidence": 0.52,
+      "rationale": "Low keyword overlap with any single taxonomy node — recurring complaints about a new in-app AI assistant giving incorrect account information don't map cleanly to an existing signal pattern (heuristic placeholder for LLM tagging)."
+    },
+    "needs_review": true
   },
   {
     "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES002KPB",
@@ -3269,6 +3544,31 @@
       "rationale": "Keyword overlap with \"Operational and Compliance — Fraud (External and Internal)\" signal patterns (heuristic placeholder for LLM tagging)."
     },
     "needs_review": false
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AESAIA004",
+    "type": "Voice",
+    "date": "2026-06-05T00:00:00",
+    "root_cause": "Customer told the rep the AI assistant gave conflicting answers about their payment due date in the same conversation, and they no longer trust what it tells them.",
+    "normalized": {
+      "canonical_statement": "Customer told the rep the AI assistant gave conflicting answers about their payment due date in the same conversation, and they no longer trust what it tells them.",
+      "key_phrase": "ai assistant wrong",
+      "entities": [
+        "assistant",
+        "wrong",
+        "balance"
+      ]
+    },
+    "tag": {
+      "theme": "Customer identity and access",
+      "l1": "Operational and Compliance",
+      "l2": "Information and Cyber Security",
+      "l3": "Information and Cyber Security Protect",
+      "l4": "Customer Identity and Access",
+      "confidence": 0.52,
+      "rationale": "Low keyword overlap with any single taxonomy node — recurring complaints about a new in-app AI assistant giving incorrect account information don't map cleanly to an existing signal pattern (heuristic placeholder for LLM tagging)."
+    },
+    "needs_review": true
   },
   {
     "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES004LGQ",
