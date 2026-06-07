@@ -76,6 +76,18 @@ export default function DashboardPage() {
       method: "POST", headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ alertId: openAlert.id, action, note }),
     });
+    await refresh();
+  }
+
+  async function executeAction(actionId: string, path: "alert" | "automate" | "research", note: string) {
+    if (!openAlert) return;
+    const res = await fetch("/api/actions/execute", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ alertId: openAlert.id, actionId, path, approver: "demo-approver@amex.com", note }),
+    });
+    const data = await res.json();
+    await refresh();
+    return data;
   }
 
   const progressPct = agg ? Math.round((agg.cursor / agg.total) * 100) : 0;
@@ -214,6 +226,7 @@ export default function DashboardPage() {
           playbook={playbookFor(openAlert.theme)}
           onClose={() => setOpenAlert(null)}
           onDecision={recordDecision}
+          onExecuteAction={executeAction}
         />
       )}
     </div>

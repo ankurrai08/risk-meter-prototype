@@ -10,7 +10,16 @@ export async function GET() {
     recent,
     alerts: store.firedAlerts.slice(0, 30),
     alertConfigs: store.alertConfigs,
+    triggerMonitors: store.triggerMonitors,
+    actions: store.actions.slice(0, 30),
+    feedback: store.feedback.slice(0, 30),
     audit: store.audit.slice(0, 80),
     taxonomyNodeCount: taxonomy.length,
+    governance: {
+      redactedCount: store.redactedCount,
+      redactionTotals: store.redactionTotals,
+      itemsSeen: store.seen.length,
+      needsReviewCount: store.seen.filter((s) => s.needs_review).length,
+    },
   });
 }
