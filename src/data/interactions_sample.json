@@ -1,0 +1,2402 @@
+[
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00BP0A",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "Apple Pay enrollment triggered an additional security verification requirement, blocking the customer from completing the add-to-wallet activation until identity was confirmed via one-time passcode and card security code."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00265P",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "The merchant payment appears to have been submitted twice, creating duplicate pending transactions. Since the charges were still pending, the agent could not initiate a formal dispute until they post, leaving the customer without an immediate resolution."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES000IGC",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The claim required proof from the airline stating the cancellation/interruption reason, but the customer could not get that document because the airline redirected them to the travel booking channel and Amex Travel could only provide an itinerary, not a cancellation validation letter."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00DH69",
+    "type": "Voice",
+    "date": "2026-06-05T00:00:00",
+    "root_cause": "The application decision system declined the customers new card application, and the decline reasons were not available to the agent in real time, so the customer could only get the explanation later via an email/status site."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES005338",
+    "type": "Voice",
+    "date": "2026-05-30T00:00:00",
+    "root_cause": "An additional cardholder made multiple payments from a Navy Federal Credit Union account via mobile, and those payments were returned. The customer didnt understand why the returns happened and feared the returned payments would harm their credit standing with American Express."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES004CHE",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "The customer could not get connected to the correct support channel to modify/cancel autopay because the provided phone numbers/transfer path were ineffective (no answer/long holds) and an alternate number was communicated too quickly to capture."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0041GB",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "Fraud monitoring flagged a buy goods transaction as suspicious, triggering a decline and requiring customer confirmation and agent action to ensure the charge stayed declined and did not post, including verifying similar activity on a second card linked to the same phone number."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES002KOG",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "The replacement card issued due to fraud had a scheduled delivery date (June 2) that did not align with the customers imminent travel date, making it seem like the replacement hadnt been sent in time."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00DELO",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The hotels the caller wanted to book were not part of the eligible hotel program and/or were not booked as required (prepaid through the eligible channel), so the hotel credit and perks (e.g., breakfast) did not apply, leaving few acceptable eligible options in the destination."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0021AU",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "The additional card appears compromised, leading to repeated unauthorized merchant attempts and several approved transactions; the customers contact routing also included an outdated business phone number, causing concern about being reached promptly for fraud verification."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00CFVM",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The payment made did not fully cover the current statement balance, and any due-date/billing-cycle changes only take effect on the next statement, so the app continued to show an amount still due on the current cycle."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00DGPJ",
+    "type": "Voice",
+    "date": "2026-06-05T00:00:00",
+    "root_cause": "Customer lacked clear information on downgrade options within their card family, specifically how changing to a lower-fee card affects rewards points, annual fee timing/proration, and eligibility for welcome offers when converting instead of applying for a new account."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00A64J",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "The card profile still reflected an incorrect embossing/name-line setup (customer name duplicated instead of the business name), and the system needs 4872 hours to process the update before a replacement card will reliably print the corrected company name."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES001FDC",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The customers rewards were redeemed as statement credits, but they did not understand what happens when there is no statement balancewhether the credit would still apply or be issued as a checkcreating uncertainty about receiving the redeemed value."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00B1JQ",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "After account closure, a remaining credit triggered a final statement and a mailed refund check, which the customer interpreted as an active account. Lack of online access and inability to receive email confirmation made it harder to understand and confirm closure and refunds."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES007QG7",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "The account profile still reflected an older last name, creating a mismatch with the callers current name on the card and delaying verification. Additionally, the cards pending discontinuation/transition had no finalized, customer-specific decision yet, so the agent could only advise waiting for upcoming communications."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES000LK3",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The payment was applied to the prior statement balance, while additional purchases posted after the statement close date were not included on the statement and appeared as a new balance, creating a mismatch between what the customer expected and what the statement displayed."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES000KP9",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "A merchant performed a $1 authorization/verification (then reversed) to confirm the card on file for an upcoming membership renewal, but the customer interpreted it as potential fraud due to lack of prior awareness/communication."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES001O4M",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "Hotel room inventory and amenities varied by room type and date, and the booking system only indicated air conditioning when explicitly labeled, leading to unclear expectations and limited options for the customers preferred beds and AC needs."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES003V5E",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "A replacement card was automatically issued (after reported suspicious charges), which deactivated the prior card. The customer, located overseas, also had constraints updating/using an APO/military address online, requiring agent handling to order delivery to the correct address."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00478J",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "The customer had not received the physical card yet, so the card could not be activated or verified for Apple Pay/online use, which triggered identity verification failures and prevented digital wallet setup."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES009H3T",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "The attempted repeat purchase did not appear in American Express systems as a decline or authorization attempt, suggesting the problem occurred at the merchant/terminal level or the transaction never reached American Express for approval."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00B72F",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "The claim is pending because required information and documents are missing, including an explanation of how the damage happened and the completed claim form with photographs of the damaged area."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES000J76",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The additional card was originally processed as the wrong card type (Platinum instead of the requested matching Reserve card), leading to a replacement order and confusion across multiple contacts about whether the change had been submitted and when the correct card would arrive."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00AEO6",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "The caller did not understand a small Apple recurring charge and believed they needed to contact Apple to update the card number; unclear communication (call audio breaking up) added to confusion during the interaction."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES003J7N",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "The account remains enrolled in a financial relief/payment plan that imposes a temporary spending limit, and even after paying the balance it takes time for the payment plan status and spending limits to be removed following an automatic review period."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00D47A",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "Multiple incorrect password attempts caused an account lockout, and the customers vision impairment prevented self-service password reset online, forcing agent-assisted reset and creating confusion about linked account credentials."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00BULL",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "A gas-station pre-authorization hold and automated near-limit alert were mistaken for an actual posted charge, while pending return/refund credits had not yet processed, creating the impression of incorrect billing and reduced available spending."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00CT69",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The customer did not see or have access to the payment confirmation email after submitting a payment, creating uncertainty about whether the payment was successfully recorded and how to obtain a copy/confirmation details."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00A5VA",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "A Walmart tire purchase was processed/authorized, but the merchant reordered incorrectly (wrong size/quantity) and did not provide confirmation or delivery of the corrected order, leaving the customer with an active charge for goods not received and needing a dispute/refund."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES007PGU",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "As an additional cardmember, the customers profile/app view reflects only their own spend/transactions rather than the full combined account balance shown to the primary cardmember, creating mismatched balance displays and confusion about what is owed."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00407M",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "A potentially fraudulent merchant added undisclosed delivery insurance fees and appeared illegitimate (no product received, hard to contact), prompting concern the card details could be used for further unauthorized charges."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00890K",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "An unauthorized Apple transaction (and a similar prior charge suggesting possible recurring billing) appeared on the account, and the customer lacked clarity and ability to validate the charge with Apple, requiring Amex to open a fraud investigation and replace the card."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00B12A",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "The customers request (replacement Priority Pass cards) could not be fulfilled by the initial servicing team, and handling required clarification of eligibility and then directing the customer to Priority Pass directly for reissuance, creating a confusing, multi-step resolution."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0054VM",
+    "type": "Voice",
+    "date": "2026-05-30T00:00:00",
+    "root_cause": "The application details and document-submission steps cant be accessed without verifying the primary applicant on the call, and the caller experienced difficulty navigating the phone system to reach an agent for help."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00076E",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The flight reservation made with points is handled by the travel service team rather than general customer service, so the agent could not modify the booking and had to redirect the customer to American Express Travel for changes/cancellation."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00DR8C",
+    "type": "Voice",
+    "date": "2026-06-05T00:00:00",
+    "root_cause": "The customer compared thirdparty (Expedia/Iberia) fares and inclusions to American Express Travel inventory, which had different fare bundles and seat-selection rules, creating a perceived price mismatch; limited English proficiency and delayed Spanish support increased misunderstanding."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES002U0F",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "The purchase was processed through PayPal and the merchant provided incomplete/misleading documentation (missing amount, unclear vendor name) plus inconsistent tracking numbers without carrier details, making it difficult for the customer to match the receipt to the Amex charge and confirm delivery."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00CRDK",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The subscription is governed by a merchant contract (with possible early termination fees), and a card-level merchant block only declines future authorizations without cancelling the underlying agreementleaving the customer uncertain how to end service without additional complications."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES007QS2",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "After the fraud cancellation, the replacement card order appears not to have been successfully created/mailed (system/process breakdown), requiring the agent to re-check the account and manually reissue a new card with updated delivery details."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0069RF",
+    "type": "Voice",
+    "date": "2026-05-31T00:00:00",
+    "root_cause": "The online cruise booking flow appears to have an age-validation/system error that miscalculates or misreads the infants date of birth, triggering an under-6-month restriction even though the child is older."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0054QR",
+    "type": "Voice",
+    "date": "2026-05-30T00:00:00",
+    "root_cause": "Escalating safety concerns about traveling to a conflict area created uncertainty about whether the reservation could be canceled or changed without losing money, prompting the customer to seek clarity on refund/credit and fee options."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES002S0S",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "The additional cardholder application could not be completed because required identity verification was incomplete: the social security card was received, but a valid photo government ID image was still needed, and the customer only had a temporary paper ID during a last-name change."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES003T7M",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "The annual fee waiver was initially refused because the account was canceled outside the allowed timeframe for waiving the fee, despite the customers lack of recent card usage and possible missed billing due to an address change."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0067PP",
+    "type": "Voice",
+    "date": "2026-05-31T00:00:00",
+    "root_cause": "The customers payment timing and AutoPay settings didnt align with when funds become available and are transferred from savings to checking, creating concern about interest and risking missing payments unless AutoPay amount and due date were adjusted across accounts."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00217Q",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "American Airlines is not eligible for direct point transfers, and the customers account cannot access point transfers, forcing redemption through Amex Travel or statement credit, with materially different point values that created confusion and dissatisfaction."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES001I53",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "The customers address appears to be associated with a small business solicitation/account offer they did not request, likely due to incorrect or misdirected marketing data linking their address to an unfamiliar business name."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES007375",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "American Express does not currently generate a formal document (authorization/signature card) that explicitly verifies all signers and account restrictions for the business checking account; only an ownership letter is available, which lacks the specific wording/details the city requires."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES001TU6",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "The customers card details appear to have been compromised, resulting in unauthorized Microsoft transactions being attempted/approved even though the physical card remained secured and the customer did not authorize or recognize the purchases."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES006JR7",
+    "type": "Voice",
+    "date": "2026-05-31T00:00:00",
+    "root_cause": "The charge resulted from a binding live-auction bid entered with an extra digit, and the merchants policy treats auction bids as final, so the seller wont cancel/refund unless the item is returned or not delivered, limiting immediate recovery options."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES006BNV",
+    "type": "Voice",
+    "date": "2026-05-31T00:00:00",
+    "root_cause": "Fraud attempts triggered an automatic block and replacement of the customers card, so the old card number was no longer recognized by the phone verification system, leading to confusion about the cards validity and the legitimacy of the alert."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00B7P2",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "After a product change, the account balance reflected prorated annual-fee charges and refunds (for days the Platinum card was used), leaving an amount due that the customer didnt recognize; a previously viewed older car-rental transaction added to the confusion."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES004M7R",
+    "type": "Voice",
+    "date": "2026-05-30T00:00:00",
+    "root_cause": "The system restricts check spending power requests to three attempts within a 24-hour period, so additional checks trigger a limit-reached message and prevent further approval checks until the window resets."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES000R3K",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The customers accounts were transferred to external collection agencies, preventing American Express from accessing account information or setting up an internal payoff/payment plan, so the customer had to work with the third-party agencies instead."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00DBI1",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "Priority Passs system is rejecting the enrollment because it believes the additional cardmember already has an existing Priority Pass account through another provider, creating a mismatch that requires internal escalation to correct."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES008EVL",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "The fare-difference credit tied to the ticket change was not issued/posted, and the agent could not complete escalation to the travel team because of a system outage that prevented the call from being processed/handled to resolution."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00A10A",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "A prior autopay payment was returned for insufficient funds, triggering an automatic account hold and payment re-try cycle that temporarily restricted card usage until funds/payment status could be confirmed with the bank and the hold manually removed."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES002D0C",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "Customer believed cash advances would reset each statement cycle and could be repaid over time, but the available cash-advance amount did not replenish without paying down the existing cash-advance balance; inconsistent prior guidance and unclear explanations caused ongoing confusion and planning disruption."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0072C9",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "The callers balance inquiry was routed through an automated/incorrect channel (Travel instead of customer care), leading to a transfer process and additional verification steps, delaying access to the requested account balance."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES001BRM",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The business card/account was frozen due to verification that the underlying business is no longer active, causing the card to be declined for transactions and autopay payments."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00A9NG",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "Customer misplaced their American Express card and needed a replacement card issued and shipped."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES005CT4",
+    "type": "Voice",
+    "date": "2026-05-30T00:00:00",
+    "root_cause": "The minimum due changed because the account had a pay-over-time limit; any spending above that limit became due in full, and unpaid amounts from the prior month carried forward and combined with new charges, increasing the balance used in the minimum due calculation. The caller was unaware of the pay-over-time limit."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00BJLC",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "The statement for the current cycle had not yet generated, so the system didnt show a minimum payment due. The customer misunderstood the billing cycle timeline (statement close date vs. payment due date), leading to confusion about whether a June payment was required."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00BESC",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "The online replacement-card confirmation flow was misunderstood, leading the customer to unintentionally request/issue an extra card on the same account and receive an additional physical card they did not need."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES006L8I",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "The customer lacked clarity on which recent transactions made up the current total balance because they forgot at least one charge, creating a mismatch between their expected amount due and the actual statement balance."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00APTU",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "A new account triggered heightened security monitoring, flagging multiple DoorDash authorization attempts as suspicious and generating an active security alert that required manual identity verification to remove the block/alert."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES003GI8",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "Calls to the concierge phone line/IVR were disconnecting (hanging up) when the customer dialed the number on the back of the Platinum card, blocking access to concierge for event ticket assistance."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00CUQT",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "A subscription/membership fee was attached to the original phone order without the customers awareness, and canceling the product order did not cancel the membership. The merchant then billed recurring/annual charges and did not successfully process the customers cancellation attempts."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00176F",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The customer didnt have access to their card details (last digits) while away from the physical card, and security restrictions prevented the agent from disclosing any portion of the card number via phone or text, limiting the customers ability to identify the correct card for payment."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES000SAL",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The desired hotel room type (specific 3-bedroom villa/view) and preferred business-class seats were not available through the agents booking channels/partner inventory for the requested dates, limiting options versus what the customer saw elsewhere online."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00C7RS",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "A login attempt triggered an alert and the account became inaccessible; the customer interpreted this as a takeover. In reality, the account access issue was due to an incorrect/forgotten password and needing identity verification and a password reset to unlock the login."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00446J",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "The new card was already tied to an existing online profile, so attempting to add/register it as if it were separate triggered an associated with another account message until the customer logged in under the correct existing user ID and the app refreshed."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES005B4T",
+    "type": "Voice",
+    "date": "2026-05-30T00:00:00",
+    "root_cause": "A suspected fraudulent Cash App attempt triggered an alert while the customer was unable to find their card, leading them to believe the card may be lost or unsafe and prompting a request to invalidate the card and issue a replacement."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES001C98",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The expected Farm Bureau insurance charge had not yet been processed or posted to the card account (no posted or pending transaction), leaving the customer unable to verify the payment within American Express records."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00479S",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "The customers request was ambiguous at first (asking to have one of those sent out), causing the agent to misunderstand and require clarification before processing a replacement card order."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0020KD",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "An online ad flow on the customers phone appears to have resulted in an unintended transaction and a subsequent attempted additional charge, prompting a security flag on the card and the need for identity verification before the agent can take action."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0073AK",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "The lost card request triggered identity/authorization verification requirements (card number unavailable and third-party involvement), and unclear terminology around available balance versus amount due caused confusion when reviewing payment details."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0054SU",
+    "type": "Voice",
+    "date": "2026-05-30T00:00:00",
+    "root_cause": "A payment was returned due to insufficient funds, triggering an account/card hold and a pending re-collection window. The hold remained active until it was manually reviewed/removed after bank verification and internal processing."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES008BG6",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "American Express travel booking access was limited by airline fare/inventory and codeshare restrictions, so the system could not display or sell some routes and prices the customer found online, forcing the customer to adjust routing, timings, and legs of the trip."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00BN14",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "The customer did not have clear visibility/confirmation of the accounts statement closing date, resulting due date, and the posting status of a recent Airbnb charge needed for bill planning."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES006NN6",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "The required phone-based verification step failed (outbound call/connection or recognition issue), preventing the agent from verifying the caller and proceeding with resolving the fraud alert on the account."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES002VJB",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "The customer is calling to check the status of a credit card application and needs assistance accessing the application outcome through support/new accounts."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES006SVE",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "The application was automatically flagged for identity validation, so processing could not continue until the customer completed verification (and they couldnt use their existing card details since they didnt have the card with them)."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES006HBM",
+    "type": "Voice",
+    "date": "2026-05-31T00:00:00",
+    "root_cause": "An Uber Eats order was submitted with the incorrect pickup/delivery location and Uber would not cancel or assist, leaving the customer uncertain whether the cards monthly Uber credit would still apply to the transaction and whether they would lose the benefit."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES003PJ4",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "The payment received was applied/processed as an amount that did not cover the full minimum due (short by a small amount), likely influenced by confusion from overlapping statement cycles and a prior stop-payment plus wire adjustment, leaving a residual past-due balance."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00CCQI",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "Recurring charges are controlled by each merchant, so they cant be automatically migrated by Amex to a new card, and the customers annual fee was already billed for the current period, making it non-refundable upon mid-cycle cancellation."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES004NJM",
+    "type": "Voice",
+    "date": "2026-05-30T00:00:00",
+    "root_cause": "The card activation/confirmation attempt failed through the customers initial method (likely automated/self-service), requiring manual activation by the agent using card details."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00CTBN",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The online activation workflow would not complete for the employee card despite the account indicating the card was active, forcing manual activation through an agent after additional verification."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00CJPC",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The customer lacked knowledge about required authentication/payment details for using their Amex card online and how the billing cycle and due date work for a new recurring charge on an infrequently used account."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00BTN1",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "The application contained a different address than the customers home address, triggering an identity/address verification requirement and additional information request before approval could be finalized."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0017U8",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "Transaction descriptions on the account (notably for Amazon) lacked sufficient itemized details, preventing the customer from matching the billed amount to a specific purchase and creating concern it could be unauthorized."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00BAEG",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "Customer mis-tracked the payment due date and their payments, leading them to believe they made a late payment and might incur a late fee, even though earlier payments already covered the minimum due and the account was not delinquent."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00BMMK",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "The customer mistakenly added a fee-based employee card (Reserve) instead of the no-annual-fee employee card option, which triggered the membership fee charge on the account."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES003423",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "The savings account closure left the remaining balance in a stale/unreturned state that required claim-specialist handling to release or return the funds, and specialist unavailability/long queue prevented resolution during the call."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES009VSE",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "The SMS one-time passcode delivery/verification failed for the callers phone number during login recovery, preventing identity verification and access until an alternate method (email) was used to reset the password."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00DB28",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The transactions had already been authorized/processing, so they could not be instantly cancelled on request; the customer also believed cash payment should negate the card charges, creating a mismatch between their expectation and what could be done at that stage."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES004CG0",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "Benefit rules were unclear to the customer (enrollment status, eligible purchase channels, posting timeframes, and quarterly/semiannual reset/expiration), so they struggled to maximize credits versus the high annual fee and questioned keeping the card."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES002VT6",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "The account/card had a security restriction triggered by an identity-related concern, which caused purchase attempts to decline until the customer completed identity verification and card confirmation."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES008GH7",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "The caller contacted American Express support for an issue tied to a different issuers card/account, so AmEx systems and agents could not authenticate or troubleshoot the app access problem and had to redirect the caller to the issuer on the back of the card."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0072TN",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "The customer lacked clarity on how a payment amount and timing would affect available spending power/credit for an immediate additional charge on the Business Platinum account."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES004P96",
+    "type": "Voice",
+    "date": "2026-05-30T00:00:00",
+    "root_cause": "The system/process does not allow agents to view or disclose a credit limit for an application that is awaiting the customers final acceptance, so the customer cannot confirm the limit before deciding."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00BPCO",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "Online booking flow appeared to default to the wrong Platinum card during checkout, so the system attempted to use an account with insufficient points and would not allow points redemption to complete."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00CMC4",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "A suspected compromised card/account number triggered a fraud alert and required a replacement card; the replacement order was submitted with standard shipping, and the system/agent couldnt change it to expedited afterward, creating delivery timing concerns and payment-update confusion."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00AC8T",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "Apple Pay setup triggered an additional identity verification requirement, so the customer had to call and complete a one-time passcode validation before the card could be activated on the device."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES003VMC",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "The customer suspects their account details were compromised, leading to fraudulent transactions, and they lack visibility/confirmation about any new charges and the status of the ongoing investigation while the replacement card is in transit."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00CKDF",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The recurring subscription wasnt stopped before the April 29 charge because the merchant block was applied on April 30, and the customer didnt have a clear in-app path to cancel/identify the subscription, leading to continued billing and confusion about the charges."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00602D",
+    "type": "Voice",
+    "date": "2026-05-31T00:00:00",
+    "root_cause": "The customer could not get immediate help because coverage/claims support was only available during limited business hours with no effective international/after-hours escalation, and the only alternative (claims website) was unusable without internet access."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00115D",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The customer made the qualifying purchases before adding/activating the Amex Offer on the card, so the transactions didnt track as eligible for the statement credit."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0044VA",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "Marketing/terms content presented balance transfer fee language for a business card application, creating the impression the feature was available; however, the account/product is not eligible, and the mismatch couldnt be resolved in real time, requiring escalation and waiting 710 days."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES000LP8",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The caller misunderstood where the one-time verification code would be delivered (text vs. email), which delayed completing the verification step."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES005O5I",
+    "type": "Voice",
+    "date": "2026-05-30T00:00:00",
+    "root_cause": "Recurring merchant charges tied to the account (e.g., Apple Pay/Serius XM/ESPN) were not stopped by disabling the card, and the customer previously received incorrect instructions, creating confusion about how to prevent future charges unless merchants are blocked and/or the account is closed."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES007FJJ",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "Lack of clear, easily accessible pre-travel information/confirmation about Centurion Lounge shower amenities and the on-site process to request them, leading the customer to call to verify details before arriving."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES004O04",
+    "type": "Voice",
+    "date": "2026-05-30T00:00:00",
+    "root_cause": "Adding or authorizing a travel/account manager required verification from another authorized individual, and that person was not available during the call to complete the verification process."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0015L8",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "Flight changes triggered a full ticket repricing and required verifying residual credits, but credits were not clearly visible/traceable in the travel agents system and the itinerary had been issued as a combined ticket, leading to uncertainty about available credits and incorrect calculations."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES003QIC",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "The qualifying subscription charge is processed through PayPal as an intermediary, so it does not register as an eligible direct merchant charge for the statement credit, preventing automatic credits and leaving prior months uncredited."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00AISL",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "The customer lacked clarity on how payments are applied on the accountspecifically whether a single payment automatically includes the membership fee or if it requires a separate payment."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00D53I",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The employee card order was already in processing from the online request, which prevented changing shipping speed; expediting required canceling the existing order and re-submitting a new request with the primary cardmember on the line to complete required disclosures."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES005NR1",
+    "type": "Voice",
+    "date": "2026-05-30T00:00:00",
+    "root_cause": "The restaurant transaction was declined due to a point-of-sale/chip-read issue, requiring the merchant to use contactless tap instead of inserting the chip; initial attempts and communication delays caused repeated failures before the correct method worked."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES003RH5",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "The payment flexibility option began after the prior statement closed, so the earlier statement still required a minimum payment. Because that older statement remained unpaid past due, the system generated credit bureau reporting alerts and showed different past due versus current bill amounts."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00C1SH",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "After booking through Amex Travel and then upgrading a single leg via the airline, the booking details and baggage rules were not clearly reflected/consistent across booking channels, making it hard for the customer to determine the correct baggage allowance without contacting the airline."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES009DBI",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "The earlier interaction did not successfully disable autopay or enroll the account into the program that prevents late fees; the account remained delinquent, triggering system-driven autopay and potential late-fee assessment, creating a mismatch between what the caller expected and what the system executed."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES007C44",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "-"
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00BQQQ",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "The customers available card access depended on confirming a recent payment, but verification with the customers bank could not be completed during the call due to difficulties navigating the banks authentication/IVR flow and inability to reach a live representative promptly."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES008EL1",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "The customers card was likely lost or stolen (possibly taken from their bag while at a location they visited), enabling unauthorized merchants to run transactions on the account."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES002M6V",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "Customer already had an active car rental and did not know if that would prevent booking another rental (especially with the same company) or require changes like adding a driver or switching companies."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES004MEL",
+    "type": "Voice",
+    "date": "2026-05-30T00:00:00",
+    "root_cause": "The customer needed assistance linking a newly received Gold card to their existing American Express mobile app profile so both cards would appear under the same account login."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES002KPB",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "The customers mobile login attempts triggered an account lockout, preventing access until identity verification was completed and a temporary password email was used to reset the password and re-validate the device."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES004DDJ",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "A payment was treated as returned/unconfirmed on the account, triggering a temporary card hold despite the customers bank showing the funds had cleared, requiring manual bank verification to release the restriction."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00DJ2D",
+    "type": "Voice",
+    "date": "2026-06-05T00:00:00",
+    "root_cause": "The customers Gold/business card was not consolidated/linked to the existing Membership Rewards profile where their other cards points were combined, so points did not display online and could not be used for travel booking until a separate team linked the accounts."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00AEPM",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "The account-opening process required a callback verification to confirm the applicants identity and phone number before continuing, which the customer did not understand and perceived as suspicious/inconvenient."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00A2M2",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "Because the account had reached the allowed number of card replacements, the customer could not receive a standard replacement and instead had to open a new business account, which required providing the business tax identification number that the customer didnt have during the call."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES004LGQ",
+    "type": "Voice",
+    "date": "2026-05-30T00:00:00",
+    "root_cause": "The employee had a family emergency the day before travel, requiring the business to cancel a non-refundable flight and understand what cancellation options existed and how the resulting airline credit would be issued and managed."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00DK35",
+    "type": "Voice",
+    "date": "2026-06-05T00:00:00",
+    "root_cause": "Airline point transfers require the loyalty account name to match the primary or an additional cardmember, and the customer didnt understand the name-matching/linking rules or confirmation steps before submitting the transfer, creating fear of an irreversible points loss."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00AUHG",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "The request required the mutual client/primary account holder to be on the line for authentication, but the client did not answer the phone, preventing the agent from processing the letter request during this call."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES007TIT",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "A merchant charge posted to the customers account without their authorization, indicating potential card compromise and requiring fraud case investigation and card replacement to prevent additional unauthorized transactions."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00ATUV",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "An automated returned-payment process retried the original payment and placed a temporary account hold that agents could not manually stop, while prior contacts gave inconsistent explanations about card usability during the hold."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES007EKM",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "System/profile setup for the account manager was not fully updated: authentication and notification routing still referenced old contact details and/or lacked a registered phone for online identity, causing IVR SSN verification issues and verification codes to be delivered to the old email."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES006LC5",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "A sudden personal emergency eliminated the customers planned pet care, forcing potential trip cancellation after at least one hotels cancellation deadline had already passed, creating uncertainty and potential financial penalty for nonrefundable lodging."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES003VFQ",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "The travel charges posted to a different card account that is not enrolled in automatic payments, so the customer must pay that card manually; uncertainty about how the two separate accounts are billed created concern about double payment."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES002K8N",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "The points transfer flow locked the customers account after multiple incorrect Marriott Bonvoy account number entries, and the customer also struggled to navigate the mobile app to locate the transfer-points option to complete the transfer."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES009J70",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "Online account experience did not provide a clear option to edit the existing auto-draft/payment plan settings, leaving the customer unable to update banking details and uncertain how to prevent the upcoming scheduled draft after making an immediate payment."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES009A5S",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "The caller misunderstood the rules and value differences for point redemptions: higher travel value requires booking through the travel portal, and point redemptions are issued as statement credits (not payments), so they dont satisfy the minimum payment requirement."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES001H5R",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "At the time the Capital One debit was attempted, the available balance in the Amex checking account was slightly below the withdrawal amount (short by cents), causing the payment pull to fail for insufficient funds and creating conflicting status between the two institutions."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00DPG1",
+    "type": "Voice",
+    "date": "2026-06-05T00:00:00",
+    "root_cause": "Recurring unauthorized Amazon Digital Downloads transactions continued even after prior fraud reports, and the card appears tied to a company-managed program, preventing the customer from directly closing the account without the program administrator contacting Amex."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES000SU4",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "Product and fee explanations were not initially clear (two employee card types with different benefits/fees), and the application review included an address/ZIP mismatch that required re-confirmation, creating confusion during the enrollment process."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0025BA",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "The agent mistook the existing address on the account as the new requested address, creating confusion and requiring the customer to clarify and repeat the correct new office address to complete the change."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES002QMA",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "The companion certificate is generated only after the cards first renewal/annual fee cycle, so it wont appear immediately in the first year. Separately, the additional-user bonus requires adding a new user during the offer period; an already-added user cannot be counted or backdated."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00BJ4A",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "The corporate card payment was not made on time because the customers headquarters/central payor took too long to process and submit the bill payment, triggering an automatic late fee."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES002U5C",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "The external bank account linking was stuck in pending/failed validation because micro-deposit verification had not completed (or incorrect digits were entered), so the bank account was not fully registered and outbound transfers to that bank could not be enabled."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00CI5P",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The system automatically cancels/blocks additional cardmember issuance/activation when the employees identity matches a prior defaulted American Express account (e.g., tied to bankruptcy/collections), and frontline agents have no override or workaround beyond reapplying/escalating."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES007QN2",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "Proof-of-coverage letters for car rental protection required routing to the insurance/specialist team and were not generated instantly, resulting in multiple transfers and an email delivery window of up to 30 minutes while the customer was waiting at the rental counter."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00B4BD",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "Access to the online account was blocked due to a login lockout and recurring website/login instability, preventing the customer from reaching the payment flow until identity verification was completed."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0014F2",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "Inconsistent or unclear case-status communication and limited access to the assigned case handler led the customer to believe the claim was closed, requiring a callback request instead of providing a real-time resolution or definitive update."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0075PP",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "The customer lacked clear understanding of additional-card renewal fee rules, the option to switch to a no-fee companion card, and how refund timing works (full credit within 30 days vs. prorated credit afterward), creating uncertainty about when to make changes."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00743C",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "Yelp subscription billing continued (or was not fully terminated) after the customer believed it was canceled, and the customer lacked dated documentation showing cancellation occurred before the renewal/charge date, limiting the ability to immediately dispute/refund the charges."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00B43M",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "The customer has multiple American Express cards and could not independently confirm which card(s) still had their spouse as an active additional cardholder/authorized user, requiring the agent to search and verify across accounts."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES008N6T",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "The booking channel used by the agent displayed different inventory/pricing and did not show the promotion the customer expected, likely due to availability changes or rate-plan differences between the hotels direct website and the agents booking system."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES009T4B",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "A likely phishing/scam call occurred during the customers login attempt, creating uncertainty about whether the contact was from American Express and whether their account had been compromised."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES004FTJ",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "The customer is unfamiliar with the post-approval setup and benefits: how digital wallet/instant card number access works (including the one-time passcode), and how Membership Rewards redemption/value works for travel, including booking channels and whether any booking fees apply."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00AAAI",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "Payments were made after the due date and/or statements were not paid in full by the due date, causing penalty APR and residual daily interest to accrue across billing cycles; the customer did not understand how the interest/amount-due was calculated and why it continued after paying."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES000B7D",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "Customer did not know the current available spending capacity on the card and lacked confidence that the pending purchase amount would be approved without exceeding the limit."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00CI2O",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The reservation change required cancel/rebook, and points used on the original booking are refunded as a statement credit rather than immediately reinstated as points, creating uncertainty about when/how points would return and what to do for the new booking."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00D6HJ",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The callers profile lacked sufficient verified credentials/authorization (missing card details and unknown PIN, plus not set as primary/manager for full access), preventing the agent from accessing the correct account and sharing charge/notification details without the primary cardholders participation."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0027Q6",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "The initial card shipment was returned by USPS after an unsuccessful delivery attempt, and the carrier provided no clear return reason beyond an unclear delivery status, preventing the customer from receiving the card at their address."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00CIOR",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The customer entered the wrong card security code while paying online due to uncertainty about whether to use the 4-digit code on the front or the code on the back, leading to initial CVC validation failure."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00A1FF",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "A recent system maintenance/upgrade caused delayed or repeated delivery of login one-time passcodes after the customer had logged in earlier, creating the appearance of unauthorized login attempts despite no fraud alerts on the account."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00DMFF",
+    "type": "Voice",
+    "date": "2026-06-05T00:00:00",
+    "root_cause": "The airline fare rules for the purchased ticket do not allow refunds or passenger name transfers, so the unused ticket can only be converted into a limited-time travel credit; if not canceled, the airline may treat it as a no-show and reassign the seat."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES004NH5",
+    "type": "Voice",
+    "date": "2026-05-30T00:00:00",
+    "root_cause": "The account shows recurring/subscription transactions that the customer doesnt recognize, but Amex can only display limited merchant-level details and cannot confirm whether the customer enrolled or whether it was an auto-renewal, forcing the customer to contact merchants for clarity."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00BPQK",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "The caller was misdirected to the Travel department instead of the billing/payment system, and the agent could not directly reconnect them to the payment module without requesting sensitive card details for routing."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0069P2",
+    "type": "Voice",
+    "date": "2026-05-31T00:00:00",
+    "root_cause": "The customer did not have clear visibility/understanding of their accounts current balance, next payment due date, and the annual fee renewal timing, leading to repeated questions to confirm whether and when they needed to pay."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES002697",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "American Express initiated a business account information update that required identity verification and submission of business documentation; the customer was unaware of the purpose of the outreach and initially lacked the card number, delaying clarity until the agent matched the account by phone and PIN."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES005D1M",
+    "type": "Voice",
+    "date": "2026-05-30T00:00:00",
+    "root_cause": "The customer needs transaction dispute resolution details, but the interaction is unclear and incomplete (likely due to poor communication/transcript quality), leaving the customer without a clear explanation or actionable steps beyond generic references to electronic documents."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00814Q",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "Wire instructions could not be verified on the inbound call since it was not from a verified phone line; verification required a callback to an approved/recognized office number."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES002T5U",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "American Express placed a hold on the customers business card account because requested business verification (tax ID confirmation and supporting IRS/tax documents) sent by email since February was not completed, triggering a compliance follow-up call and urgent message."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES008BK1",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "Uncertainty about whether the account had sufficient spending power/authorization to approve a high-dollar transaction, creating fear the charge would be declined at the point of sale."
+  },
+  {
+    "interaction_id": "007VM17S48D0F4QJ47PQR55AES00L3GG",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "A fraudulent Apple Pay charge attempt triggered an identity-theft security alert, requiring account security remediation (including replacing the card). The customers reliance on the card and time constraints made them unwilling to complete the required security steps immediately."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00D77A",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The application pulled an address the customer couldnt substantiate with required documentation (name + exact address), and identity/address verification via public-record questions was unsuccessful. Because the submitted application address cannot be changed, the only resolution was canceling and submitting a new application with a verifiable address."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00D63J",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The transaction appears to have been billed via Etsy for a seller/merchant listing, but the customer could not find any corresponding order record in their Etsy account, creating uncertainty about whether the charge was legitimate and whether/when to file a dispute."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES004LPJ",
+    "type": "Voice",
+    "date": "2026-05-30T00:00:00",
+    "root_cause": "The agents transaction summary response did not include the requested dollar amounts at first, creating an extra step for the customer to obtain the complete information they asked for (todays charges and amounts)."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES009E8T",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "Access to the account was blocked because the caller could not provide the exact address on file required for identity verification, especially after the account holders death; without that match and formal death notification/estate process, the agent could not discuss or take action on the account."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00DT19",
+    "type": "Voice",
+    "date": "2026-06-05T00:00:00",
+    "root_cause": "A legitimate chip transaction was automatically flagged by security checks on a new account, and the customers phone number was not updated, increasing the need for manual verification before allowing charges."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00383S",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "The caller believed travel activity might trigger a transaction decline since the trip wasnt booked on the card, so they needed confirmation that their travel location/dates were on file to avoid payment issues."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES009I9Q",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "The merchants claimed refund was not received/posted to the account, leaving the charges outstanding and forcing the customer to dispute them and provide evidence to support removal."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0023EF",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "A hold was placed on the corporate card account because required identity verification wasnt completed via the know your customer link, preventing authorizations until the customer submitted the requested personal details and the hold was refreshed/removed."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00BI19",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "The system could not validate the employee cardholders identity details during activation, triggering a manual verification process that required document upload (SSN and drivers license) before the card could be confirmed and activated."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES005FKH",
+    "type": "Voice",
+    "date": "2026-05-30T00:00:00",
+    "root_cause": "The customer did not know or could not recall the accounts security PIN required for identity verification during the card replacement process."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00BOPF",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "The transaction was still pending/unposted, so the dispute process could not be initiated yet; additionally, the issue was buyers remorse and would require attempting cancellation/refund with the merchant first rather than an immediate card dispute."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00BAAV",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "An address-change notification (likely triggered or reflected in the system) created uncertainty about which billing ZIP code was currently on file, leading the customer to be unsure what ZIP to provide for card verification during a transaction."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES003J8D",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "A merchant authorization/pending charge was created when the customer clicked into checkout (or the site malfunctioned), even though the customer didnt intend to complete the purchase; the transaction remained pending, delaying immediate dispute action."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES006VBJ",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "An unauthorized merchant attempted a charge using the card details, indicating the card number had been compromised, prompting the customer to block further attempts and replace the card with a new number."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00DT9N",
+    "type": "Voice",
+    "date": "2026-06-05T00:00:00",
+    "root_cause": "A system/processing issue affected certain applications submitted on a specific date, causing the annual fee to post incorrectly within the first year and preventing earlier dispute requests from resolving it until a known-issue credit was applied."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES002UUL",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "The customer continued receiving billing and collections communications for an account they believe was fraudulently opened, but front-line support could not access details because the account was already canceled, leaving the customer without confirmation or resolution and requiring referral to another department."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00A2Q5",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "The second reservation was created outside Amex Travel, so the agent had no system access/permissions to add cross-references or link the two bookings; only Lufthansa can update that other record, requiring the customer to call the airline."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES009TSI",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "The online account password was revoked after repeated failed login attempts, likely triggered by an incorrect autofilled/saved password (possibly altered by a browser/device update), which led to a lockout requiring a password reset and preventing reuse of the prior password."
+  },
+  {
+    "interaction_id": "00126H38IGD0JDKLGNPAR55AES004QJE",
+    "type": "Voice",
+    "date": "2026-05-26T00:00:00",
+    "root_cause": "The payment request could not be completed because the customer was unavailable to continue the verification process due to being on a conference call, requiring them to end the interaction and call back later."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00B5L0",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "After reporting fraud and receiving a replacement card, the customer still saw the Ticketmaster transaction and lacked clarity on whether it was a new fraudulent charge or the existing one already under investigation and being removed."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES005VSH",
+    "type": "Voice",
+    "date": "2026-05-31T00:00:00",
+    "root_cause": "The app displayed a red payment reminder/caution indicator for an upcoming bill, which the customer interpreted as an overdue or missed payment due to unclear visual/notification design and lack of explanation in-app."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0097JI",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "The online activation flow required email access/verification, and the customer couldnt access their email promptly (computer not on phone), causing the activation attempt to time out and require agent assistance."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES000FKE",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "Two transactions posted on the account for the same purchase amount/date, while the merchants system shows only one, creating uncertainty about whether the duplicate is real and requiring dispute investigation to resolve."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0026G2",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "An account-related email prompted a callback likely due to recent outbound transfer activity, but the email did not clearly explain the reason, leaving the customer unsure why they were contacted and what needed to be resolved."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES006M30",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "Same-day booking limitations in the online travel portal prevented selecting the desired date/rate, and the caller misunderstood how points convert differently across hotel program types and how hotel incidental holds/pending charges appear; Travel team also lacked access to card transaction details to explain the pending charge."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES005K4V",
+    "type": "Voice",
+    "date": "2026-05-30T00:00:00",
+    "root_cause": "The card replacement flow relied on a 3digit security code entry and SMS-based verification, but the customer only had a 4digit code on hand and used a landline that cannot receive text messages, preventing completion without a callback/alternate verification."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES004A75",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "A significant language/accent and pacing mismatch made it hard for the customer to capture key details (merchant name/descriptor and process steps), creating repeated misunderstandings about the transaction source and the correct sequence for return/refund versus filing a dispute."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0011UM",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The replacement/renewal card shipment had not been received and the system initially did not show a clear delivery date, requiring the customer to call to confirm shipment and request/send a replacement with tracking."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES004ASC",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "The cards built-in travel benefits did not include medical or evacuation coverage; the customer assumed it was included based on prior cards and needed a separate travel medical policy, which required additional trip details (like first payment date) to purchase."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00AJCP",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "The itinerary couldnt be changed as desired because the airline had an active hold/control over the ticket, and travel restrictions required entry through specific hubs, limiting direct-flight options and causing longer reroutes and waits."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES001BPT",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "App login was blocked by credential/verification mismatches (multiple user IDs, temporary password workflow, and autofill reusing old credentials), and Face ID login wasnt enabled at the device/app level, creating navigation confusion that was worsened by hearing difficulty and call interruptions."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES001EOK",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "Adding an authorized user/account manager requires the 3-digit security code from the physical card, but the customer only had temporary card details via email and hadnt received the card yet."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00DCDR",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "Rewards could not be applied to the already-issued current statement balance/payment due; redemption only posts as a credit toward the next statement cycle, so it wouldnt reduce the immediate amount due before the 10th."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES009678",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "The dispute was closed in the merchants favor based on merchant-provided documentation claiming intent to fully refund if the customer canceled the dispute, but the customer neither received a refund nor had clear guidance/visibility on how the dispute status and re-posted charge related to the refund process."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0016VG",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The long-term payment plans terms (mandatory full monthly autopay, no split payments, restricted spending, and credit bureau notation) did not fit the customers desired flexible payment approach and comfort with credit impacts, after receiving inconsistent information about the monthly amount."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00DS9T",
+    "type": "Voice",
+    "date": "2026-06-05T00:00:00",
+    "root_cause": "A schedule/regulatory change prevented the itinerary from being ticketed under a Delta flight number operated by Air France, causing the customers booked segments to appear unconfirmed and be interpreted as canceled, requiring rebooking under Air France flight numbers and processing a refund/reissue."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES009V54",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "The authentication step failed because the one-time passcode SMS was not received, preventing the agent from accessing the account to clear the security alert tied to the old card."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES002DFJ",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "The remaining reimbursement depends on verifying with the airline that the unused ticket value/credit was not used within the one-year period, requiring adjusters to contact the airline before releasing the final payout, creating a delay beyond the customers expectation."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES002ESB",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "The customer previously relied on automatic payments and stopped tracking payments after losing employment, leading to uncertainty about the next scheduled payment date and the current account balance under the payment agreement."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00C64C",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The earlier fraud-handling call dropped before the replacement was processed, and fraud protection changed the cards identifying digits and suspended online use, causing the IVR to not recognize the old digits and leaving the customer uncertain about card status and next steps."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0090CC",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "The external bank-linking process for the newly opened account did not complete successfully (both automatic linking and manual entry failed), causing the system to exit/timeout and preventing the Bank of America account from being connected for funding transfers."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00A8G2",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "Repeated rebookings and a split itinerary created multiple/unclear reservation records, and the caller lacked a confirmation/locator email, so the booking could not be reliably found online and was difficult for the agent to retrieve for changes."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0030IR",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "Account access could not be verified (PIN and card security code failed, and customer couldnt retrieve the emailed one-time passcode), preventing the agent from reviewing or resolving the transaction declines during the call."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES004MH6",
+    "type": "Voice",
+    "date": "2026-05-30T00:00:00",
+    "root_cause": "After the concert reschedule, the ticket redemption/transfer link was invalidated and the merchant (StubHub) did not reissue/restore access or refund, while Ticketmaster and StubHub each claimed the other was responsibleresulting in non-delivery of purchased tickets."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES009SDA",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "A language barrier prevented effective communication because the customer needed a Spanish-speaking representative and was not successfully transferred or supported, so the issue could not be clarified or resolved before the call ended."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00B95G",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "The account was automatically locked after the customer entered incorrect information during an online credit limit increase attempt, triggering a system error and requiring identity verification to restore access."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES007R3N",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "An overpayment created a credit balance that was automatically refunded by check after it sat without activity, so the customer no longer saw the credit on the account and didnt realize a check had been mailed to an address they werent expecting."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES003R1S",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "The customers account was temporarily suspended due to enrollment in a long-term financial relief program, which prevents card use until the full balance is paid to $0, even if an available balance appears."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00A2OL",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "Following a prior hacking incident, a scammer likely attempted to trick the customer into sharing one-time passcodes by sending phishing texts that looked like login verification messages, creating uncertainty about account security and whether the downloaded app/login flow was genuine."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00DP4H",
+    "type": "Voice",
+    "date": "2026-06-05T00:00:00",
+    "root_cause": "A recent security/fraud flag on the account created uncertainty about whether the customers ticket-related charges were successfully processed or might be declined, requiring agent verification of the transaction status."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00DBKG",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "A recurring merchant charge was posting to the card even though the customer could not confirm any paid subscription or valid account tied to them, and the merchant could not provide identifying account informationmaking it unclear whether it was a billing error or an unauthorized subscription."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00CNCU",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The caller did not recognize which security code the agent requested (3-digit code on the back of the card) and initially referenced a different 4-digit code, creating a brief verification mismatch."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES003K3A",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "The customer attempted to use an older/inactive card instead of the replacement card that was issued and expected to arrive, leading to a decline and uncertainty about which card number was current."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00D2ON",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The charge appeared under a merchant description the customer didnt recognize and for an amount higher than expected, likely related to their medical alert service, leading them to believe it might be incorrect and prompting them to seek confirmation and contact details."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES005MDA",
+    "type": "Voice",
+    "date": "2026-05-30T00:00:00",
+    "root_cause": "The customers card benefits did not include the additional features they expected (extended warranty/extra insurance) or any active merchant partnership discount for Home Depot, leaving only standard 90-day purchase protection coverage."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES007EC3",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "The accounts spending flexibility was reduced because the balance was being carried (paying only minimum/partial amounts) and payments were missed, which led the system to assign a set spending limit and lower available capacity until consistent full/remaining statement balance payments are made."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00CDIT",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The merchants system could not match or produce documentation for a cleared card charge (only generic lodging details available), preventing confirmation of the transaction and prompting the customer to seek a dispute/inquiry for an itemized receipt."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES006V27",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "Poor call audio/clarity during the initial agents transfer to another representative made it difficult for the customer to hear and understand what was being said."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0082OG",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "The card number appears to have been compromised or attempted for use by an unauthorized party, triggering a high-dollar declined purchase alert and requiring replacement of the card to prevent future fraudulent attempts."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES009N3F",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "The customer misunderstood which of their Amex cards (and which benefits) provided extended warranty/purchase protection after switching products years ago, and agents provided unclear or conflicting explanations, leaving the customer unsure about coverage for a new large purchase."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES008A9M",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "The account began operating with a set credit limit and showed over-limit/overdue status, restricting spending until payments reduced the balance. Confusion was compounded by misunderstanding charge-card rules versus pay over time (inactive) and prior inconsistent explanations about splitting payments and due amounts."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES002B42",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "The account balance carried over with high interest/fees led to a large calculated minimum payment; the customer paid less than the required minimum, so the account remained past due and the card was temporarily suspended, triggering late-payment messaging the customer perceived as inaccurate."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES004E2B",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "The customer likely lost or misplaced the card, and someone used it to make multiple unauthorized purchases (e.g., wireless, gas station, restaurant), resulting in unexpected charges on the account."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0042FK",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "Inactive/unused employee cards were still active on the business accounts but didnt appear clearly in the callers view, causing the company to miss canceling them before the annual/renewal fee posting window and making the fee removal require special approval."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0014NE",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The additional card application couldnt be completed because the applicants identity/address couldnt be verified through internal checks (no SSN on file), and the submitted bank statement didnt match the application address due to the missing apartment number, triggering further documentation requirements."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0068KQ",
+    "type": "Voice",
+    "date": "2026-05-31T00:00:00",
+    "root_cause": "The accounts total balance was over the cards spending limit, so transactions were declined until a payment reduced the balance to within the spending limit."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES000GFE",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "Unauthorized card activity and unfamiliar recurring Apple subscriptions, combined with the customers difficulty navigating mobile apps/settings during the call, prevented them from quickly verifying receipts or canceling the services."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00B0G7",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "The customers recent payment was still processing and not yet posted in the system, so the account display did not reflect the resulting credit, causing inconsistent balance messaging and confusion about whether they had a zero balance or a credit."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00AAO6",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "Automated outreach and alerts were triggered because a prior months payment on the Delta SkyMiles Gold card posted late (received after the due date), likely due to mailing/check transit delay, causing the system to flag the account and prompt follow-up calls despite the current payment being made."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0045M0",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "The customers savings account was not displaying in their online profile, and the call could not proceed because the interpreter was added incorrectly via transfers, requiring the customer to call back through the correct number to set up interpretation support."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00B0J0",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "The agent initially referenced different balance types (statement balance vs remaining balance vs upcoming cycle charges), which caused the customer to doubt whether the amount quoted was their current balance as of today after payment."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00401H",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "Security validation to change banking required a specific transaction amount plus a 6digit approval/authorization code, but the customer didnt have receipts and initially couldnt retrieve the code from their card-processing system, creating a delay."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0007UQ",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The customers online login required two-step verification, but their mobile number was not properly set up/updated to receive the one-time passcode, leading to being locked out and unable to complete sign-in."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0017PG",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The customer did not immediately understand the agents question about the refund delivery method (check versus direct deposit to a linked credit union account), causing a momentary need for clarification."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00D0AB",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "Enrollment and eligibility rules depend on primary vs authorized user access; the customer was attempting to enroll/view benefits and promotions from a non-primary login and expected to qualify for an online points offer, but the account already had a fixed acquisition offer that had been met and credited."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00BKRL",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "The additional card number appears to have been compromised and used for test/authorization transactions ($1$2) by unknown parties (possibly via a PayPal-linked email), leading to unauthorized charges and a fraud claim/card invalidation."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0012FN",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "Previously requested additional employee cards were created on an older business account but were never received (returned due to an incorrect mailing address) and never canceled, triggering renewal/replacement notifications years later and creating mismatched visibility across the customers accounts."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0044SP",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "The account remains under the former owner/primary account holder until internal review is approved and a separate transfer application is completed, creating a processing delay and leaving the caller unable to immediately replace/remove the prior partner or fully restrict their access."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00164M",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The statement view/timing made it appear the quarterly credit was missing; the credit had been issued after the charge posted and would appear on the next statement, creating a mismatch between the customers expectations and what they saw on the current bill."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES000LFG",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The claim was closed because the file indicated another insurer was primary and had already paid, and Amex would not provide policy/coverage confirmation directly to the third-party insurerrequiring the cardmember to request/share those details."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0063OG",
+    "type": "Voice",
+    "date": "2026-05-31T00:00:00",
+    "root_cause": "The account was canceled and the latest charges had not yet been billed/posted to a generated statement, creating confusion and delaying a clear balance confirmation until the agent provided the amount."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0017KV",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The merchant treated the initial purchase as a recurring subscription (or enrolled the customer unintentionally), leading to an unauthorized repeat shipment and charge; the customer lacked clear instructions/ability to cancel and return the temperature-sensitive product for a refund."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES009LCR",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "The customer service representative did not have access to (or could not provide) the specific internal dates for when the spending limit was last reviewed and when the next review would occur, so the customer could not get a definitive timeline beyond a general six-month cadence."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0049JR",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "The caller could not authenticate that the inbound/outbound phone interaction was genuinely from American Express, and recent identity theft made them unwilling to share sensitive information needed to locate the account."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES005546",
+    "type": "Voice",
+    "date": "2026-05-30T00:00:00",
+    "root_cause": "The customer lacked visibility into which merchants had recurring/autopay charges linked to the card, and the agent could not provide a comprehensive list of recurring transactions, creating uncertainty about potential post-cancellation charges or declines."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00CC72",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The merchant appears to be charging the card again (possibly as a subscription/recurring billing) after the initial purchase, and the customer did not knowingly authorize or cancel any recurring billing, leading to unfamiliar repeat charges and confusion about how to stop and dispute them."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0095R6",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "The customers email was already tied to an existing American Express corporate card login, so a separate online profile/user ID for the new savings account wasnt created/locatable, preventing access until the email was temporarily changed and the savings online account was set up."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES003SGT",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "Customer is retired, no longer travels, and doesnt use Green Card benefits, so the annual fee feels unjustified compared with keeping only the other card they actually use."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00A2OB",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "The personal loan application required identity verification using a mailed one-time code and an outbound call to the phone number on file, so the customer had to contact the fraud team and complete additional steps before the loan could be finalized."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES002H2M",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "An external caller likely left a fraudulent voicemail impersonating American Express about a suspicious charge and card disabling, creating uncertainty about whether the outreach was legitimate and whether the customers account was at risk."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00D86L",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The merchant charges appear to be set up as a recurring/auto-renewal arrangement, and card replacement does not automatically stop recurring transactions. Additionally, the caller and agent could not match the merchants transactions to the specific card number being reviewed, preventing an immediate block/dispute."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00AMML",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "Recurring Apple subscription charges continued after the customer canceled in Apple subscriptions, but the customer lacked a cancellation confirmation/reference and exact cancellation date, leading to agent validation requirements and perceived disbelief before the dispute and merchant block could be processed."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00APEV",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "The renewal card was automatically issued and marked delivered, but the customer was unaware of the automatic renewal process and the account address on file was missing an apartment number, making delivery/receipt unclear."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES008UU9",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "Card credentials were compromised and used for recurring Amazon Digital/Prime billing, while the customers updated phone number was not correctly set as an identification contact on the account, creating verification and support delays."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES004BL0",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "The customer was busy with time-sensitive work (contractors/supplies) and couldnt stay on the line for the optional card benefits walkthrough, leading to an abrupt interruption and early call termination."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES008V2N",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "An attempted charge showed only limited, generic merchant details, leaving the customer unable to match it to any purchase and therefore unable to confidently confirm whether the activity was fraudulent or legitimate."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES007IVU",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "Transactions at the Elks and Moose social clubs were processed in a way that prevented the system from awarding the 4X dining points automatically, requiring manual point adjustments and a back-office review to prevent recurrence."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES003FJN",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "A fuel station pre-authorization for a higher amount triggered an alert email, and the customer didnt understand pre-authorizations or realize the activity was on an additional cardmembers card, leading them to think it was an unauthorized gas charge."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES001P3P",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "The customers cash withdrawal attempt failed due to an invalid cash-advance PIN, and resolving it required using a cash advance option that carries fees and immediate interest accrual, leading the customer to abandon the request."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES001U52",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "The customers preferred payment method (debit card/instant payment) wasnt available for phone payments, and ACH/check payments have a processing delay, which conflicted with the customers need due to their card being locked."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00C5GS",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The itinerary involved an international arrival with uncertain customs/baggage timing, and the customer lacked confidence that self-booking would secure the right flight and refund flexibility. They also expected a temporary fare hold option, which wasnt offered through the channel."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES007UV3",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "The customer received a suspicious-looking email referencing a new credit account on their credit report, but it likely was not an official American Express notification (or was unrelated to their Amex account). Lack of clarity about the emails legitimacy created uncertainty and concern about potential fraud/identity theft."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES006GV7",
+    "type": "Voice",
+    "date": "2026-05-31T00:00:00",
+    "root_cause": "Hotel inventory details in the booking tool didnt clearly show multi-room availability (how many rooms were actually available), forcing the agent to test-select rooms to confirm capacity and slowing the callers ability to decide and switch reservations."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES007RA6",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "After the card was canceled/replaced, the login reset flow switched to requiring the replacement cards 3-digit code, which the customer didnt yet have, blocking password creation and access. Concurrent suspected unauthorized changes to account contact info increased lockouts and security concerns."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES007L70",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "The refund request required verification using the 3-digit code from the callers primary card, but the caller did not have that card in their possession (couldnt locate it), so the refund could not be processed until a replacement card arrives."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES008KRK",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "Because the card was replaced due to suspected fraud/theft, the replacement account credentials could not be used for purchases until the physical card is received and activated, preventing the customer from accessing the full card number or making online payments immediately."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00DB0L",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The customers payment attempt did not complete through the automated payment path and was redirected to a live agent, requiring the customer to ask for the amount due and finish the payment manually."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0010D1",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The account holders identifying details on file didnt match what the customer entered (SSN discrepancy), so the system blocked online profile creation and required submitting a form and Social Security card copy to update records before login could be created."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00CECL",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The customer lacked a clear, easy-to-follow itemized statement view and payment timing explanation, leading to confusion when manually writing down numerous transactions and interpreting the difference between statement closing date and payment due date."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00C0FG",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "Multiple Dollar General transactions were made without the customers authorization, including in another location, indicating the card/account details were compromised (possibly during a brief period the card was misplaced) and used for in-store purchases."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00BSIV",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "Caller entered card details on a third-party site while searching for Dropbox support; the site appeared to auto-enroll them in a subscription and attempted a higher-than-expected charge ($65), triggering fraud concerns and a request to deny the transaction."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES001V1A",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "The replacement additional cardmember card had a different design than expected after the downgrade, and the customer lacked clarity on what card type was issued, leading them to suspect an unintended upgrade/change."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00135D",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "Misrouting and account-lookup failure: the customer was transferred to new accounts (not the appropriate fraud team), and the agents search by SSN/name did not return the customers existing card, forcing repeated verification and delaying connection to a fraud specialist."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES007GBU",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "The reservation had not yet been canceled/updated in Amex Travels system because the agent required a documented waiver/approval from the property before processing the exception cancellation, creating a delay and uncertainty until the agent obtained approval and completed back-office processing."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00DAGQ",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The Platinum charge was blocked because another card on the same account (Blue Business Plus) showed an outstanding payment due; the customers recent payment had not yet been recognized/verified at the time of the decline."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0069A1",
+    "type": "Voice",
+    "date": "2026-05-31T00:00:00",
+    "root_cause": "Autopay was configured to pay the statement balance a few days before the due date, so the statement still showed an outstanding $5 balance until the scheduled payment date, leading the caller to think autopay wasnt working."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES002555",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "The customers account currently has no active referral offer/link for the Platinum card; referral availability is targeted and can appear or disappear without a published schedule, so the app does not display a Platinum referral option."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES004EHR",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "The document submission page did not display the expected attachment/upload control on the customers laptop session (likely a browser/session or page-rendering issue), so the customer couldnt add PDFs and mistakenly sent a submission without attachments."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES003G8H",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "The customers card usage issues were driven by their own temporary card freeze after an initial decline, creating the impression that the account was still restricted despite the payment posting and the account returning to current status."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES003FI7",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "The customer/merchant was attempting to charge the blocked virtual billing account number instead of using the lodger token created for the account, and the customer did not have access to the token details until the agent provided them."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00A10M",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "The customer misunderstood the rental car benefit as including liability coverage and was unclear about the required rental-counter selections (declining collision/loss damage waiver while optionally purchasing liability), creating uncertainty about being protected if they hit another vehicle."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0088M4",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "The caller expected flexibility/availability that isnt supported: the annual card membership fee is charged once per year (not monthly), and personal loan applications cant be initiated without a system-generated pre-approval offer tied to their account."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES002L0L",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "A high-value foreign transaction triggered an account alert that locked/limited the card, and the existing spending limit was too low for the hotel deposit/incidentals, requiring agent intervention to raise/remove the limit so the charge could be approved."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES007QFU",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "The system limited the refund amount available (likely due to how refunds are calculated against required minimum payment/return timing), preventing a full duplicate-payment refund and creating conflicting guidance between agents. Authentication friction occurred because OTP text delivery failed, delaying completion of the refund attempt."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES003ANF",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "The customers account was enrolled in a payment plan that appears to limit card usability, and the agent was unable to access/modify the enrollment due to a system issue, requiring transfer to a dedicated financial relief/payment plan team."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES005561",
+    "type": "Voice",
+    "date": "2026-05-30T00:00:00",
+    "root_cause": "The additional card number was compromised, allowing fraudsters to post multiple transactions before detection; the customer lacked clear confirmation on how and when credits would be applied for fraudulent charges that were already paid."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES008GUB",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "The customer lacked clear guidance on where and how to enroll in the complimentary Marriott status and where in the American Express online account to access point-transfer details; they were using AmexTravel (booking site) rather than the Rewards/Membership Rewards transfer section."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES004F79",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "The customer received incorrect or inconsistent information (likely from a merchant or third party) claiming two invoices were rejected by American Express, while Amex systems showed no declined transactionssuggesting the issue was not an Amex decline but external reporting/merchant-side processing."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES001A3C",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The customer lacked clear understanding of whether adding an additional cardholder would affect their credit score, creating hesitation during the additional card discussion."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0085K4",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "The customer reported the card as lost, which triggered permanent invalidation; once invalidated, the physical card they later received cannot be activated, requiring issuance of a new replacement card and creating timing concerns for upcoming travel."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00A8NT",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "Flight quote verification depended on an email sent to a shared mailbox and the specific travel team member handling the request was unavailable, delaying confirmation and next steps until they returned and could review the details."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES001UQG",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "Miscommunication during verification: the customer had difficulty hearing/understanding the agents request for billing address information, leading to confusion and repeated clarification while completing post-payment authentication steps."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES000UIA",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "A temporary account suspension was triggered by a financial review requiring verification documents, and the document-upload process is restricted to laptop/computer access, preventing the customer from submitting documents via mobile and delaying reinstatement."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00BVI5",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The mailed statement displayed only a partial account number, so the customer didnt know what full identifier to include on the check to ensure the mailed payment posts to the correct card account."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00A3C1",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "The savings account application was declined due to the customers Experian-based FICO score, and the customer had not yet received the adverse action letter explaining the decision and factors, creating uncertainty about what happened."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES000D6S",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The business account admin lacked enough information/visibility to determine if the additional cards Cyber Ultra transaction was legitimate or unauthorized, so the fraud alert could not be conclusively confirmed or denied during the call."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES001NE8",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "The booking system/reservation details reflected only accessible room types, and modifying room type/adjacent-room requests required hotel confirmation; however, the hotels reservation team was unavailable until the next morning while the cancellation policy was about to expire, limiting immediate resolution options."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00DO2D",
+    "type": "Voice",
+    "date": "2026-06-05T00:00:00",
+    "root_cause": "An unknown merchant attempted an online charge using the customers card details, triggering a fraud alert and card replacement; the customer was unsure whether replacing the card would interrupt legitimate recurring subscription payments."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0048T1",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "The itinerary involved mixed carriers and multiple fare types, which made it unclear to the customer whether it would be one ticket or two and what the price differences meant, requiring repeated confirmation before proceeding with a hold."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0031B6",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "Membership Rewards points cannot be moved directly between individuals, and Japan Airlines is not a supported points transfer partner on the customers card, so the customer could not fund the other persons airline account to book the flight."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES007IOB",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "A purchase attempt triggered a security verification because the merchant did not accept American Express, resulting in a declined transaction and an alert that required confirmation the card was not lost or stolen."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00960J",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "An account credit was created after a membership fee adjustment following the customers payment; the credit remained on the account long enough that a check was automatically issued, but the customer wasnt aware of the adjustment/credit source."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0093KH",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "A replacement card was requested after the card was lost, but the accounts shipping address is no longer current and the customer does not know whether the replacement shipment can be redirected or updated in time."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES003S6D",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "A motel authorization/charge was initially declined for suspected fraud, and earlier communication led the customer to think it was later approved and posted, while the hotel was paid on another cardcreating confusion about whether AmEx also charged them."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES007FI8",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "The customer had not previously enrolled/selected an airline for the incidental airline fee credit and lacked clarity on what charges (bags, seats, etc.) qualify and how to trigger the credit, requiring transfer to Card Services for setup and explanation."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0012CC",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The fraud investigation was still within the standard 68 week processing timeframe, leaving the customer without a final outcome yet while the disputed charge appeared on the current statement, creating uncertainty about payment handling until a temporary credit is issued."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0030C0",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "A fraudster used the customers card credentials for an Amazon charge; because the card number was previously stored with the merchant (or otherwise still usable), a subsequent attempt resulted in a posted transaction, making it seem like the replaced/old card was still active."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0072N7",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "Payments were being routed to the corporate card through a digital-wallet or stored-payment-method setup (e.g., corporate card present in a wallet/merchant profile on the device), causing transactions the customer believed were personal to post to the corporate account."
+  },
+  {
+    "interaction_id": "00126H38IGD0JDKLGNPAR55AES009336",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "An unexpected call drop interrupted the ongoing replacement-card order, requiring the customer to resume the request and repeat verification/address details to complete shipment of the corrected rose-gold card."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0078HK",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "The transactions were person-to-person send/split transfers that the customer themselves authorized under a scam, so they are handled like cash transfers with limited ability for Amex to cancel or dispute; reversal would need to be pursued with Venmo/PayPal."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES004MJ7",
+    "type": "Voice",
+    "date": "2026-05-30T00:00:00",
+    "root_cause": "An account login attempt alert triggered concern because the customer did not recognize or expect any login activity, creating uncertainty about whether the account was being accessed by an unauthorized person."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES008C8C",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "The travel booking system had technical errors/availability constraints during the credit exchange workflow, forcing the agent to restart the reservation and re-enter details, which led to delays, multiple holds, and repeated confirmations before the tickets could be issued."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0058L8",
+    "type": "Voice",
+    "date": "2026-05-30T00:00:00",
+    "root_cause": "The loan application was held for additional security checks due to a fraud-victim flag/security concern on the account, requiring phone verification before terms and e-signature could be sent."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES007R1A",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "Confusion about the ability to transfer points to Delta and the associated excise tax fee options (paying by card vs. using additional points), driven by unclear/interrupting communication and misinformation from an external source."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00CQH7",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "After previously carrying a revolving balance, the customer paid the card in full but a residual interest charge posted the following month, creating an unexpected remaining balance."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00DBQQ",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The account was frozen because the requested taxpayer identification information update was not completed/responded to, preventing transactions from being approved until required documents are submitted and processed."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00ABMK",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "The cancelled-flight refund couldnt be processed immediately because the airline ticket was placed in an archived status and needed to be retrieved/confirmed with the airline before Amex Travel could finalize the refund."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00C8EU",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The reservation was modified directly with the car rental company, and those changes no longer displayed in the American Express Travel view, creating uncertainty about whether two reservations existed and whether the caller could be charged twice."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00D5DV",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "An unauthorized transaction attempt triggered a fraud alert and decline, requiring the customer to verify the charge as not theirs so the account could be flagged for fraud and a replacement card issued."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0096G1",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "The payment was flagged as returned and remained in a review/verification state because the banks final payment confirmation hadnt yet been transmitted/recognized, so the account stayed restricted until the agent manually confirmed clearance with the bank."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES002RL2",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "Inconsistent guidance and unclear eligibility/process for creating virtual cards led the customer to believe the feature might not be available and to search for an approval email, instead of being directed to the correct online account path (Account Services  Card Management  Add/Manage Virtual Card)."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES003FFI",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "Account details could not be confirmed with a third-party merchant without authenticating and getting consent directly from the cardmember, so the verification required the cardmember to join and pass identity checks."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES005ERM",
+    "type": "Voice",
+    "date": "2026-05-30T00:00:00",
+    "root_cause": "The accounts Plan It feature only offered a 24-month plan option for the quoted amount, and there was no supported way to model a 12-month Plan It scenario (or profit calculation) beyond paying extra/early payoff, leaving the customer without the requested 12month cost breakdown."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES003UH1",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "The customer shifted heavy business spending to a card they previously rarely used, triggering internal spending-power limits/alerts and reduced available capacity until additional payment history on that card is established or a payment is made sooner."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES001285",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "Multiple credit card applications were submitted (some withdrawn/rejected), triggering an identity-protection risk flag that automatically terminates further applications and cannot be manually overridden, forcing the customer to wait before reapplying and potentially missing a desired welcome offer."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00ARBO",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "The authentication process failed because the one-time passcode delivery (text/email) was experiencing a technical issue, preventing successful verification and blocking the agent from accessing the account to reissue the card or confirm the mailing address."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00DE9L",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The payment was not made in full and was late, triggering a late fee; prior late-fee adjustments on the account reduced the likelihood of another waiver and required extra review before approving an exception."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00A49K",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "The account application could not be finalized until an identity verification step was completed, and the customer was briefly unsure about the specific acceptable forms of ID required for the upload process."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00139U",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The claim process requires a third-party shop to inspect the damaged item and complete/sign a repair estimate form (even if it cant be repaired). The customer cannot identify any local shop willing/able to evaluate dye-bleed garment damage, preventing claim submission."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00DKOD",
+    "type": "Voice",
+    "date": "2026-06-05T00:00:00",
+    "root_cause": "When the card was approved, it was associated with a newly created SkyMiles account number rather than the customers existing SkyMiles account, requiring manual linking and a later card replacement to reflect the correct number."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES005NBV",
+    "type": "Voice",
+    "date": "2026-05-30T00:00:00",
+    "root_cause": "The customer lacked access to the additional cardholders card details, requiring an alternate identity-verification method (a callback), which the customer did not understand and therefore questioned."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0011LH",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The purchase amount was above the accounts preset credit limit, and the customer didnt know that spending above the limit depends on dynamic spend capacity (spending power) that can change based on balance/payments and credit profile."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES000UD6",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The Apple gift cards were issued as digital gift cards stored within the American Express online account, but the customer didnt know where to locate/access them, leading them to believe the gift cards were never received."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00AUBH",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "The merchant processed two charges even after confirming cancellation and receiving the refused/returned package, then failed to complete the promised refund, leaving the customer to seek a card dispute for the transactions."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00912M",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "Periodic identity/customer verification was not completed in time (customer could not easily reach support and was unclear what was required), triggering an automatic restriction/suspension that declined purchases until the information was verified."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES009FK3",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "The caller did not have/used the correct American Express phone number to make an automated payment, so they could not complete the payment independently and required agent assistance to submit the payments."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES009U65",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "A merchant subscription (GoPro) continued billing the customers account despite the customers attempts to cancel directly with the merchant and despite a previous card change meant to prevent further billing; the customer also lacked the physical card, adding confusion about the account and charges."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES002SPP",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "The guarantee request couldnt be processed because the form lacked the required authorized signer (program administrator) and proper signature, so it was rejected and had to be corrected and resubmitted, delaying the limit increase needed to stop card declines."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0011GI",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The booking/pricing process requires a specific travel date/itinerary to quote fares and policies, but the customer wanted flexible date exploration and comparisons; repeated requests for one exact date led to miscommunication and the perception of resistance from the agent."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES009IAR",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "The cancellation request was delayed because the agent focused on retention alternatives (benefits, downgrade option) instead of immediately processing the customers straightforward request to close the account due to the annual fee."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES001CCD",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The customers prior cancellation request (made via chat and then a live agent) was not completed or not properly documented for the primary card, so the account renewed and the annual membership fee billed; resolving it requires internal review to verify whether cancellation was requested within the refundable window."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES003D0E",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "A system glitch left the canceled itinerary flagged as an active/current trip, which continued to trigger automated trip-related email notifications despite the segments being removed and the reservation showing canceled."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0016ND",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "Account access was restricted due to an active security alert, requiring identity verification via an outbound call to the same number; the customers phone setup/uncertainty about call-waiting made this verification method potentially unusable, preventing progress on resolving the alert."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00B3MB",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "A gas station placed a temporary preauthorization hold for a higher amount at the pump to verify the card, which later dropped off and was replaced by the actual fuel purchase amount."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0016EP",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The customers card details were likely compromised, leading to repeated unauthorized attempted charges, which triggered fraud controls and required issuing a replacement card to stop further misuse."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00CF6D",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The merchant (BuyGoods/Glyco Harmony) did not provide any responsive customer support or return instructions after delivery, preventing the customer from completing a return and prompting a dispute request."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0048CP",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "The transaction was not visible under the expected merchant name on the specified Platinum account (likely billed under a different descriptor or on a different card account), preventing the agent from confirming the requested Blue Cross Blue Shield statement pulls."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES007H5J",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "The merchant continued billing after the customers transaction ended and prevented successful account cancellation, leading to an unauthorized recurring charge and concern about future charges; the automated phone verification also failed to validate the customers inputs, adding friction before reaching an agent."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES002AIQ",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "A shared HR/payroll system unintentionally changed direct deposit for both jobs to the AmEx checking account when the customer added AmEx as a deposit destination, leaving their primary account unfunded and overdrafted and requiring an urgent transfer back."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00ALUU",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "The merchant descriptor ASPCA on the statement was unclear/misleading to the customer, making a legitimate poison control/veterinary consultation charge look like an unknown donation and triggering an unnecessary fraud concern."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES004D71",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "The customer reported the transactions after the allowable dispute timeframe/system lookback window, so the agent could not retrieve the charges far enough back or submit a dispute request for those PayPal transactions."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00AR7C",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "An unauthorized online Apple charge attempt indicated the customers card/account details were compromised, requiring the account to be secured by issuing a replacement card with a new number, which removed the limited-edition design and changed the familiar digits."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00B3F8",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "Access to the account and issuance of an online verification code requires authentication/authorization from the primary cardmember, but the primary cardmember is unavailable/incapable of speaking on the call due to dementia and the caller is not recognized on the account."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES000PAU",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The customer lacked an existing account, and the agents verification process required identifiers (SSN/card number/application reference) the customer was unwilling or unable to provide at first, preventing the agent from locating the application and addressing the suspected identity theft until escalation."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00BF5Q",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "The corporate card account remained active because neither the former employer nor the customer had canceled it after the customer left the company, triggering automatic renewal/replacement communications and continued membership fee posting."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES001D81",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The customers online payment attempt failed due to their computer not working, preventing them from completing the payment through the website and requiring agent-assisted payment processing."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES007PCP",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "Available business-class inventory for the requested route/dates (Greek islands to LAX around July 1 for four passengers) largely required long or overnight connections, leaving limited choices that met the customers short-layover preference."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00C3U2",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The caller lacked key account details required for verification (main account holder information) and was uncertain about sharing card security information, which slowed the identity/account validation needed to activate the business expense card."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00ATVS",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "The customers Platinum charge card limit is controlled by periodic internal reviews with no agent-facing ability to manually adjust it or submit a review request, leaving the customer unable to proactively change spending capacity; the request may need a different team for the other card."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00AHEK",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "The customer could not provide the last four digits of the card associated with the Membership Rewards/security code they referenced, making it harder for the agent to select the correct card/payment method; additionally, the system temporarily couldnt retrieve points, delaying redemption confirmation."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES009PIF",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "The system/channel the agent used did not show an upgrade path with a welcome/bonus offer, so the customer could not complete the upgrade with the promotional points via the phone channel and had to apply online to access the offer."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES005OM6",
+    "type": "Voice",
+    "date": "2026-05-31T00:00:00",
+    "root_cause": "A merchant attempted a transaction that appeared linked to a prior purchase/possible auto-renewal, triggering a fraud alert. The customer couldnt reconcile the merchant/amount and the email link content (showing a different transaction), leading them to believe the new charge was unauthorized."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES004KIJ",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "Recurring subscription charges posted from a merchant the customer doesnt recognize; without identifiable subscription/account details and with the merchant not locating their information, the customer cant cancel or validate the charges and is unsure how to stop them or recover prior payments."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES003LVH",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "American Express servicing tools/website were experiencing a technical outage, preventing the agent from pulling up the account and taking a payment; the workaround failed because the customer was navigating the wrong (Hilton Honors) app and couldnt quickly access the correct payment channel."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00CCKQ",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The merchants response alleged the customer was a no-show, and the dispute lacked sufficient supporting information initially, leading to the dispute being closed and the charge re-applied until the customer called to reopen and supplement evidence."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00D491",
+    "type": "Voice",
+    "date": "2026-06-04T00:00:00",
+    "root_cause": "The statement description labeled the interest as related to Pay Over Time purchases, but the interest was actually assessed because the prior statement balance was not paid in full, resulting in a carried-over balance that accrued interest."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES005NL9",
+    "type": "Voice",
+    "date": "2026-05-30T00:00:00",
+    "root_cause": "The customers purchase wasnt resolved with the merchant (delivery repeatedly delayed/partially fulfilled), and they expected AmEx to remove the charge and cancel the order, but AmEx can only file a dispute and requires specific documentation details."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0049UO",
+    "type": "Voice",
+    "date": "2026-05-29T00:00:00",
+    "root_cause": "The card/account was previously closed (apparently by the primary account holder), which prevented any further use of the card or completing the requested last transaction/credit line update."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES004MQ4",
+    "type": "Voice",
+    "date": "2026-05-30T00:00:00",
+    "root_cause": "The payment was rejected because the bank account number entered for the Navy Federal Credit Union payment method was incorrect/invalid in the system (likely a missed or wrong digit), causing the attempted payment to be returned."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES007C6P",
+    "type": "Voice",
+    "date": "2026-06-01T00:00:00",
+    "root_cause": "The customer couldnt get confirmation or resolution on an expected statement credit after a purchase that was partially paid with a gift card, likely due to prior system downtime and the agent needing transaction details to locate the chargeresulting in repeated questioning and a transfer without answering the credit status."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES002GA9",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "The card already had an existing online profile/user ID, so the website routed the customer to the sign-in screen and prevented new login creation, while the customer had forgotten their prior online access credentials."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00BS76",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "An autopay was pulled from a closed/insufficient-funds bank account after the customer switched banks, causing a returned payment and temporary account hold that could only be cleared after bank confirmation (often requiring a 3-way call and wait time)."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES005GHP",
+    "type": "Voice",
+    "date": "2026-05-30T00:00:00",
+    "root_cause": "The declined transaction appears to have been rejected at the merchant side (e.g., merchant not accepting American Express or having a terminal/system issue), rather than an account-level block or problem with the card."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES008DHP",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "The transfer could not be completed because the required recipient airline loyalty account details (Air France/Flying Blue membership number) and proper authorization had to be provided/verified during the call before the agent could process the points transfer."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES005OKD",
+    "type": "Voice",
+    "date": "2026-05-31T00:00:00",
+    "root_cause": "The transaction posted with a generic Apple.com description on the statement, so the caller couldnt identify the merchant details or that the purchase(s) were subscriptions until the agent pulled the digital receipt and explained the items."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00DMT5",
+    "type": "Voice",
+    "date": "2026-06-05T00:00:00",
+    "root_cause": "Charging privileges were placed on hold because the account was flagged for involvement with a debt settlement company, which triggered a suspension of card usage."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0018M7",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "Autopay was enabled and the customer forgot it was scheduled, then submitted an additional manual payment the same day, creating an overpayment credit. Because the credit amount was very large, the refund could not be sent electronically and had to be issued by check with a longer timeline."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0009RR",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The customers accessibility limitation (legal blindness/small print) prevented reading the mailed notice, and the agent could not locate a matching outbound communication in system records to confirm the letters origin or content."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES008EBJ",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "System/process limitations caused two hurdles: the callers expected PIN didnt match the required authentication credential, and paperless enrollment was blocked immediately after the card was linked to the online account, requiring a 24-hour wait before enrollment could be completed."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00BFVE",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "The booking flow doesnt apply the hotel credit as an instant discount and the benefit has specific qualifying rules (must be prepaid and booked through the correct hotel program), creating uncertainty about whether the selected rate/room would earn the statement credit and benefits."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00AG0B",
+    "type": "Voice",
+    "date": "2026-06-03T00:00:00",
+    "root_cause": "The customer misread pending/posted transactions in their mobile view and did not notice the offsetting reversal (negative amount), making it appear as though the pharmacy billed them twice."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES002006",
+    "type": "Voice",
+    "date": "2026-05-28T00:00:00",
+    "root_cause": "The points were credited, but the customer did not receive (or notice) a definitive notification confirming the bonus, creating uncertainty about the offer fulfillment."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES0018UM",
+    "type": "Voice",
+    "date": "2026-05-27T00:00:00",
+    "root_cause": "The customer has a newly opened charge card with a low initial spending capacity that adapts only after a spending/payment history is established, so high-dollar purchases exceed the current available amount. Additionally, the card was not yet linked in the app, limiting visibility into payments and spending power."
+  },
+  {
+    "interaction_id": "00EIRC3QUCD1D4D4IFOAN55AES00A1SJ",
+    "type": "Voice",
+    "date": "2026-06-02T00:00:00",
+    "root_cause": "Pay-with-points redemption still requires the purchase amount to be authorized as a charge on the card first, then a statement credit is applied. Because the customer had no available spending power/credit for the authorization, the transaction was declined even though the checkout displayed a $0 total."
+  }
+]
